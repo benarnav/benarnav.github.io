@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include css.md %}
+  </head>
+  <body>
+    <div class="pagecontents">
+        {% include navbar.md %}
+        <h1 class="page-title">{{ page.title }}</h1>
+        <div class="container">
+            {{ content }}
+        </div>
+        {% include footer.md %}
+    </div>
+  </body>
+</html>
