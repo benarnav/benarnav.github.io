@@ -2,7 +2,7 @@
 title:
 layout: page
 ---
-<h2>Hi, I'm benjamin</h2>
+<h2>hi, i'm benjamin</h2>
 
 I'm a data scientist who likes to tell stories.
 
