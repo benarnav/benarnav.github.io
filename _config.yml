@@ -9,7 +9,6 @@ description: ""
 baseurl: ""
 url: "https://benarnav.github.io"
 exclude: [vendor]
-#include: [.well-known]
 
 future: false
 
