@@ -106,10 +106,10 @@ sub {
     background-color: #212121;
   }
   a[href] {
-    color: #9e9eff;
+    color: #00dca6;
   }
   a[href]:visited {
-    color: #bebedf;
+    color: #fa8c00;
   }
   code.highlighter-rouge {
     color: #fe8019;
