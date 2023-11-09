@@ -30,5 +30,5 @@ for pedestrians and cyclists.
 </script>
 
 <figure style="display: block; margin: 0 auto; max-width: 800px;"><a href="/assets/img/moped_examples_citywide.jpg">
-  <img style="max-width: 600px;" src="/assets/img/moped_examples_citywide.jpg" alt="mopeds found using object detection" /></a>
+  <img style="max-width: 800px;" src="/assets/img/moped_examples_citywide.jpg" alt="mopeds found using object detection" /></a>
 </figure>
