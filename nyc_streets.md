@@ -26,10 +26,10 @@ for pedestrians and cyclists.
 
 <h2>Lack of Enforcement</h2>
 
-<iframe title="As Illegal Parking in NYC Grows, the Police Issue Fewer Tickets" aria-label="Interactive line chart" id="datawrapper-chart-mr9s9" src="https://datawrapper.dwcdn.net/mr9s9/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: 1 px solid white;" height="664" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+<iframe title="As Illegal Parking in NYC Grows, the Police Issue Fewer Tickets" aria-label="Interactive line chart" id="datawrapper-chart-mr9s9" src="https://datawrapper.dwcdn.net/mr9s9/4/" scrolling="no" frameborder="1" style="width: 0; min-width: 100% !important; border: 1 px solid white;" height="664" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
 </script>
 
-<figure style="display: block; margin: 0 auto; max-width: 800px;">
-  <img src="assets/img/moped_examples_citywide.jpg" alt="mopeds found using object detection" height="1440" width="2112">
+<figure style="display: block; margin: 0 auto;">
+  <img src="assets/img/moped_examples_citywide.jpg" alt="mopeds found using object detection" height="720" width="1056">
   <figcaption>Mopeds found using a custom object detection model.</figcaption>
 </figure>
