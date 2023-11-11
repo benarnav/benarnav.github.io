@@ -5,7 +5,7 @@ div.pagecontents {
     margin: 30px auto 0px auto;
 }
 div.pagecontents p, div.pagecontents li {
-    line-height: 1.7;
+    line-height: 1.5;
     font-size: 16px;
 }
 div.pagecontents, code, pre {
@@ -14,7 +14,6 @@ div.pagecontents, code, pre {
 div.navbar {
     display: inline-block;
     padding: 10px;
-    /* Thanks, oilshell.org, for inspiration. */
     background-color: #DEE;
 }
 li.post-item {
