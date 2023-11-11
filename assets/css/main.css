@@ -55,10 +55,10 @@ a.newlink:after {
 footer hr {
     margin-top: 40px;
 }
-/* Inline code */
+/* Inline code
 code.highlighter-rouge {
     color: native;
-}
+}*/
 table {
   margin: 15px 0;
   padding: 0; }
@@ -112,9 +112,9 @@ sub {
   a[href]:visited {
     color: #fa8c00;
   }
-  code.highlighter-rouge {
+  /*code.highlighter-rouge {
     color: #fa8c00;
-  }
+  }*/
   svg, object.svg, img.svg {
     filter: invert(100%);
   }
@@ -169,10 +169,10 @@ a.footnote:after {
 figure object.svg {
   max-width: 100%;
 }
-/* Change the selection highlight color */
+
 ::selection {
-  background: #00dca6; /* Set your desired background color */
-  color: #000; /* Set the text color for the highlighted selection */
+  background: #00dca6; 
+  color: #000;
 }
 
 /* For older versions of browsers */
