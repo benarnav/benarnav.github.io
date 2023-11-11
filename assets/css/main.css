@@ -6,7 +6,7 @@ div.pagecontents {
 }
 div.pagecontents p, div.pagecontents li {
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 18px;
 }
 div.pagecontents, code, pre {
     max-width: 800px;
@@ -138,11 +138,7 @@ img.post-inline-image {
 div.post-co-authors {
     padding-top: 10px;
 }
-/* TODO(max): See https://alexwlchan.net/2021/10/console-copying/ to disable
- * prompt selection in console blocks */
 
-/* Begin: display a small horizontal bar before footnote elements if they
- * exist. */
 div.footnotes {
   position: relative;
   display: inline-block;
