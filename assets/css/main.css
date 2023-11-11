@@ -55,7 +55,7 @@ footer hr {
 }
 /* Inline code */
 code.highlighter-rouge {
-    color: green;
+    color: #00dca6;
 }
 table {
   margin: 15px 0;
