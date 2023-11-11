@@ -9,7 +9,7 @@ div.pagecontents p, div.pagecontents li {
     font-size: 16px;
 }
 div.pagecontents, code, pre {
-    max-width: 900px;
+    max-width: 800px;
 }
 div.navbar {
     display: inline-block;
