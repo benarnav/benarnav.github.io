@@ -37,10 +37,11 @@ I'll confess I am one of those people who occasionally files illegal parking com
 condition1 = borough_filtered_tmp_df['street_code1'] == tmp_stcodes[0]
 if len(tmp_stcodes) == 1:
     selected_rows = borough_filtered_tmp_df[condition1]
-    
+
 #Check if the other two street codes match (using logical OR operator)
 if len(tmp_stcodes) == 2:
-    condition2 = (borough_filtered_tmp_df['street_code2'] == tmp_stcodes[1]) | (borough_filtered_tmp_df['street_code3'] == tmp_stcodes[1])
+    condition2 = (borough_filtered_tmp_df['street_code2'] == tmp_stcodes[1]) 
+                    | (borough_filtered_tmp_df['street_code3'] == tmp_stcodes[1])
     selected_rows = borough_filtered_tmp_df[condition1 & condition2]
 if len(tmp_stcodes) == 3:
     condition2 = (borough_filtered_tmp_df['street_code2'] == tmp_stcodes[1]) 
@@ -58,9 +59,12 @@ I experimented with different methods, taking into account the time difference b
 This has come at a time when New York's streets have seen a surge in e-bikes and often illegal gas-powered mopeds, mostly caused by an increase in food delivery. The vast majority of scooters are not registered, do not have license plates and use bike lanes illegally. There has been a flurry of [anecdotal evidence](https://www.curbed.com/2023/10/bike-lane-manhattan-queensboro-bridge-cyclists-crashes.html) of crashes and close calls, with some deciding to forgo cycling in response.
 
 To better asses the problem, I built an object detection model using footage from NYC Department of Transportation cameras to show the proliferation of mopeds being driven where they shouldn't. It revealed mopeds riding in bike lanes, pedestrian plazas and across bridges in space meant for non-motorized travel. It's imperfect but allows us to begin to understand the problem and formulate solutions beyond occational [police stings](https://www.thecity.nyc/2023/09/07/migrant-moped-nypd-raid-tasers/) that burden some of the most vulnerable New Yorkers.
-<div style="text-align: center;">
-<a href="/assets/img/moped_examples_citywide.jpg">
-  <img style="max-width: 650px;" src="/assets/img/moped_examples_citywide.jpg" alt="mopeds found using object detection" /></a></div>
+<figure style="text-align: center;">
+  <a href="/assets/img/moped_examples_citywide.jpg">
+    <img style="max-width: 700px;" src="/assets/img/moped_examples_citywide.jpg" alt="mopeds found using object detection" />
+  </a>
+  <figcaption>(Results from the object detection model)</figcaption>
+</figure>
 In one particularly dangerous crossing, the shared pedestrian/bicycle path across the Queensboro Bridge, I recorded one moped roughly every five minutes using the narrow span. That essentially garanutees encoutering one since it typically takes longer to cross the bridge by foot or bicycle.
 
 Although access to the DOT camera feeds is supposed to be [available to the public](https://webcams.nyctmc.org/subscribers), I was not given access despite repeated attempts. To overcome this, I built a web scraper to download static images every two to four seconds, and to cycle through a series of cameras to capture various locations. There was minimal loss of information in this method since the cameras only produce still images every two seconds. 
