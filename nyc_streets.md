@@ -3,7 +3,7 @@ title: Understanding New York's Street Safety Crisis
 layout: page
 ---
 <h2>tl;dr</h2>
-New York City's streets are a pretty crazy place, they can be fun and exciting, but also dangerous. Amid a steady increase in complaints by ordinary citizens, police enforcement has plummeted all while there's been a surge in illegal gas powered mopeds taking to the streets. `Test` Here are some things I found:
+New York City's streets are a pretty crazy place, they can be fun and exciting, but also dangerous. Amid a steady increase in complaints by ordinary citizens, police enforcement has plummeted all while there's been a surge in illegal gas powered mopeds taking to the streets. Here are some things I found:
 
 + <u>Cops don't always do what they say they do:</u> In <b>more than a third</b> of cases where police say they wrote a ticket after someone complained about illegal parking in the past decade, no matching summons could be found.
 + <u>The NYPD doesn't enforce the law on itself:</u> Less than 2 percent of illegal parking complaints filed within a block of a police precinct resulted in a ticket over the same period, with many officer's [chronically parking](https://www.sciencedirect.com/science/article/pii/S2590198223000635?via%3Dihub) on sidewalks and in bike lanes.
