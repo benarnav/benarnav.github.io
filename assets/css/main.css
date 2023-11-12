@@ -19,8 +19,11 @@ div.navbar {
     background-color: #DEE;
 }
 .highlighter-rouge {
+  background-color: #f5f5f5; 
+  color: #333; 
   font-weight: 400;
   padding: 0.1rem 0.5rem;
+  overflow-x: auto;
 }
 li.post-item {
     display: table;
@@ -61,7 +64,7 @@ footer hr {
 }
 /* Inline code*/
 code.highlighter-rouge {
-    color: yellowgreen;
+    color: #fa8c00;
 }
 table {
   margin: 15px 0;
