@@ -18,6 +18,11 @@ div.navbar {
     padding: 10px;
     background-color: #DEE;
 }
+.highlighter-rouge {
+  color: #ce887b;
+  font-weight: 400;
+  padding: 0.1rem 0.5rem;
+}
 li.post-item {
     display: table;
     width: 100%;
@@ -57,7 +62,7 @@ footer hr {
 }
 /* Inline code*/
 code.highlighter-rouge {
-    color: orange;
+    color: red;
 }
 table {
   margin: 15px 0;
