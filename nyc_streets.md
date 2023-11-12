@@ -31,7 +31,7 @@ Police also often refuse to follow the law themselves when it comes to illegal p
 I will confess I am one of those people who occasionally files illegal parking complaints. I've filed complaints where the resolution says a ticket was issued, but when I try to find the summons in city records, it isn't there. This lead me to cross reference 311 data with Department of Finance records of parking tickets. The only way to match these was by address, since the 311 complaints do not have vehicle indentifiers like a license plate number. While both summons and 311 records both have address information, the multiple spellings of things like "Ave" vs "Avenue" could cause issues, on top of freuqent mispellings. To overcome this I translated 311 address information into [street codes](https://nycplanning.github.io/Geosupport-UPG/chapters/chapterIV/section03/), a system for normalizing this information. These codes are already present for each summons. The matching logic is below and I feel is generous to the police, as long as any ticket was written in roughly the same location on the same day, it will count as a match.
 <pre>
 
-```python
+<code class="highlight">
 #311 primary street must match street_code1 in summons database
 condition1 = borough_filtered_tmp_df['street_code1'] == tmp_stcodes[0]
 if len(tmp_stcodes) == 1:
@@ -44,9 +44,7 @@ if len(tmp_stcodes) == 3:
     condition2 = (borough_filtered_tmp_df['street_code2'] == tmp_stcodes[1]) | (borough_filtered_tmp_df['street_code3'] == tmp_stcodes[1])
     condition3 = (borough_filtered_tmp_df['street_code2'] == tmp_stcodes[2]) | (borough_filtered_tmp_df['street_code3'] == tmp_stcodes[2])
     selected_rows = borough_filtered_tmp_df[condition1 & condition2 & condition3]
-```
-
-</pre>
+</code></pre>
 I experimented with different methods, taking into account the time difference between when the 311 complaint was closed and when the ticket was issued, but subsequent hand checks found this could lead to false negatives. Despite this, I found that in the past decade more than a third of the tickets the police claim to have written in response to illegal parking complaints cannot be found in Department of Finance records. If data is unreliable then so are the policy decisions based on it.
 <br>
 <iframe title="A Growing Gap Between NYPD Claims and City Records on Illegal Parking Complaints" aria-label="Interactive line chart" id="datawrapper-chart-KN15L" src="https://datawrapper.dwcdn.net/KN15L/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="200" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
