@@ -19,7 +19,6 @@ div.navbar {
     background-color: #DEE;
 }
 .highlighter-rouge {
-  color: purple;
   font-weight: 400;
   padding: 0.1rem 0.5rem;
 }
@@ -102,6 +101,7 @@ sub {
 }
 
 @media (prefers-color-scheme: dark) {
+  @import "native.css";
   body {
     color: #dfdfdf;
     background: #101010;
@@ -116,7 +116,7 @@ sub {
     color: #fa8c00;
   }
   code.highlighter-rouge {
-    color: yellowgreen;
+    color: #fa8c00;
   }
   svg, object.svg, img.svg {
     filter: invert(100%);
