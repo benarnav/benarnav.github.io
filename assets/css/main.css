@@ -128,7 +128,10 @@ sub {
     color: #fe8019;
   }
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 /* Stuff for posts */
 img.post-inline-image {
     display: block;
