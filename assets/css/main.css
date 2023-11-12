@@ -8,7 +8,7 @@ div.pagecontents {
 }
 div.pagecontents p, div.pagecontents li {
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 16px;
 }
 div.pagecontents, code, pre {
     max-width: 800px;
@@ -34,7 +34,7 @@ div.post-date i {
     float: right;
 }
 h1, h2, h2 {
-    line-height: 1.2;
+    line-height: 1.5;
 }
 aside {
 /* margin-top: -20px;
@@ -116,7 +116,7 @@ sub {
     color: #fa8c00;
   }
   code.highlighter-rouge {
-    color: #fa8c00;
+    color: yellowgreen;
   }
   svg, object.svg, img.svg {
     filter: invert(100%);
