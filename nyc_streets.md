@@ -37,13 +37,16 @@ I'll confess I am one of those people who occasionally files illegal parking com
 condition1 = borough_filtered_tmp_df['street_code1'] == tmp_stcodes[0]
 if len(tmp_stcodes) == 1:
     selected_rows = borough_filtered_tmp_df[condition1]
+    
 #Check if the other two street codes match (using logical OR operator)
 if len(tmp_stcodes) == 2:
     condition2 = (borough_filtered_tmp_df['street_code2'] == tmp_stcodes[1]) | (borough_filtered_tmp_df['street_code3'] == tmp_stcodes[1])
     selected_rows = borough_filtered_tmp_df[condition1 & condition2]
 if len(tmp_stcodes) == 3:
-    condition2 = (borough_filtered_tmp_df['street_code2'] == tmp_stcodes[1]) | (borough_filtered_tmp_df['street_code3'] == tmp_stcodes[1])
-    condition3 = (borough_filtered_tmp_df['street_code2'] == tmp_stcodes[2]) | (borough_filtered_tmp_df['street_code3'] == tmp_stcodes[2])
+    condition2 = (borough_filtered_tmp_df['street_code2'] == tmp_stcodes[1]) 
+                    | (borough_filtered_tmp_df['street_code3'] == tmp_stcodes[1])
+    condition3 = (borough_filtered_tmp_df['street_code2'] == tmp_stcodes[2]) 
+                    | (borough_filtered_tmp_df['street_code3'] == tmp_stcodes[2])
     selected_rows = borough_filtered_tmp_df[condition1 & condition2 & condition3]
 {% endhighlight %}
 
