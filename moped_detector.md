@@ -1,9 +1,9 @@
 ---
-title: Quantifying the Surge in Illegal Mopeds Using Computer Vision
+title: Quantifying New York's Surge in Illegal Mopeds Using Computer Vision
 layout: page
 ---
 
-A version of this research published in the journal [Vital City](). And if you'd like to see the code/data behind this, [click here](https://github.com/benarnav/nyc_streets/).
+A version of this research published in the journal [Vital City](). If you're interested in the code/data, [click here](https://github.com/benarnav/nyc_streets/).
 ## tl;dr
 I trained a custom object detection model using data collected ad hoc from a network of traffic cameras to in an attempt to quantify the deluge of illegal gas-powered mopeds operating on New York's streets. It recorded over a thousand mopeds being operated illegally, with particular concern on an already congested bridge crossing.
 <figure style="text-align: center;">
@@ -17,7 +17,7 @@ I trained a custom object detection model using data collected ad hoc from a net
 New York City's streets have seen a surge of e-bikes and illegal gas-powered mopeds in recent years, mostly caused by an increase in use of food delivery apps. There are a host of problems associated with the industry as it is currently configured, but I focused on the effects on street safety in the city. While delivery workers initially chose e-bikes, a string of high-profile fires caused by substandard batteries and high costs mean more and more are switching to gas-powered mopeds. The vast majority of scooters are not registered and do not have license plates, making them illegal. Drivers frequently [illegally ride in the bike lane](https://www.nyc.gov/html/dot/html/bicyclists/ebikes.shtml), on sidewalks or against the flow of traffic. While there is no data specifically on mopeds, there has been a flurry of [anecdotal evidence](https://www.curbed.com/2023/10/bike-lane-manhattan-queensboro-bridge-cyclists-crashes.html) of crashes and close calls, with some people deciding to forgo cycling in response. All of this has created a dangerous situation on New York's already densely packed streets.
 
 ## Data and Methods
-The New York City Department of Transportation (DOT) maintains a [network of cameras](https://webcams.nyctmc.org/map) designed to monitor traffic conditions. These cameras produce a still image every two to four seconds, there is no video. Although access to the DOT camera feeds is supposed to be [available to the public](https://webcams.nyctmc.org/subscribers), I was not given access despite repeated attempts. To overcome this bureaucratic obstacle, I built a simple web scraper to download static images, and to cycle through a list of cameras to capture various locations where a bike lane was visible in the frame. This method ensured minimal loss of information since the cameras only produce still images every few seconds. The web scraper organized images by location, date and time to ensure accurate reporting of results, especially since time stamps displayed on the images were sometimes incorrect.
+The New York City Department of Transportation (DOT) maintains a [network of cameras](https://webcams.nyctmc.org/map) designed to monitor traffic conditions. These cameras produce a still image every two to four seconds, there is no video. Although access to the DOT camera feeds is supposed to be [available to the public](https://webcams.nyctmc.org/subscribers), I was not given access despite repeated attempts. To overcome this bureaucratic obstacle, I built a simple web scraper using the `selenium` package to download static images, and to cycle through a list of cameras to capture various locations where a bike lane was visible in the frame. This method ensured minimal loss of information since the cameras only produce still images every few seconds. The web scraper organized images by location, date and time to ensure accurate reporting of results, especially since time stamps displayed on the images were sometimes incorrect.
 ```python
 image_element = driver.find_element(By.XPATH, "/html/body/img")
 image_url = image_element.get_attribute("src")
