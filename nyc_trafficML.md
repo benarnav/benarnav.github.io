@@ -4,6 +4,12 @@ layout: page
 ---
 ## tl;dr
 I built a custom dataset and trained a machine learning model to understand how transportation planners can reduce traffic deaths in New York City. I found neighborhoods with a higher percentage of people who commute by public transit tended to contribute to the model predicting a crash as non-fatal and crashes within zones designated as a priority by policy makers has a similar effect.
+<figure style="text-align: center;">
+  <a href="/assets/img/nyc_streets_shap_plots.png">
+    <img style="max-width: 700px;" src="/assets/img/nyc_streets_shap_plots.png" alt="shap plots for four features" />
+  </a>
+  <figcaption>SHAP plots for four features</figcaption>
+</figure>
 
 ## Background
 Machine learning models are becoming [increasingly popular](https://www.sciencedirect.com/science/article/pii/S2095756420301410?ref=pdf_download&fr=RR-2&rr=829af43178be4282) for use in traffic modeling, where traditionally statistical models were used. In 2014, New York City implemented the Vision Zero program, aiming to eliminate all traffic deaths and serious injuries by 2024. The city is nowhere near meeting that goal and the data is trending in the wrong direction. Traffic violence has killed 223 people in 2023, a 25% increase over 2018 which was the safest year under Vision Zero. This year is also set to be the [deadliest year for cyclists](https://transalt.org/press-releases/new-york-city-is-on-track-to-have-the-deadliest-year-for-bike-riders-since-1999-new-data-from-transportation-alternatives-and-families-for-safe-streets-shows) since 1999. At the same time, New York City was recently granted powers by the state government to expand the use of ticket-issuing speed cameras, which have been shown to [reduce dangerous driving](https://home.nyc.gov/html/dot/downloads/pdf/speed-camera-report.pdf) in their vicinity.
@@ -34,19 +40,32 @@ sampler = {"over_first":
 ```
 
 ## Results
-After trying a range of models and sampling techniques, I selected a `Catboost` classifier based on it achieving the highest average precision score of 0.088. While this seems low, it must be compared against a dummy classifier which for this dataset would have a score of 0.010 (representing the 1 percent of the positive class or Killed). This represents a roughly nine fold improvement over a random guesser. A `Logistic Regression` model was also trained due to achieving the highest recall, although for real-world deployment the Catboost model would be more appropriate.  
+After trying a range of models and sampling techniques, I selected a `Catboost` classifier based on it achieving the highest average precision score of 0.088. While this seems low, it must be compared against a dummy classifier which for this dataset would have a score of 0.010 (representing the 1 percent of the positive class or Killed). This represents a roughly nine fold improvement over a random guesser. A `Logistic Regression` model was also trained due to achieving the highest recall but those results will not be discussed here. For real-world deployment the `Catboost` model would be more appropriate.  
+<figure style="text-align: center;">
+  <a href="/assets/img/traffic_confusion-pr_curve.jpg">
+    <img style="max-width: 600px;" src="assets/img/traffic_confusion-pr_curve.jpg" alt="shap plots for four features" />
+  </a>
+  <figcaption></figcaption>
+</figure>
+
+|              | Precision | Recall | F1 Score | Support |
+|--------------|:-----:|-----------:|----------|:-------:|
+| Injured      |  0.99 |       0.96 | 0.98     | 22051   |
+| Killed       |  0.08 |       0.34 | 0.13     | 231     |
+
 
 Interpreting the Catboost model using `SHAP` values showed the single most important feature for predicting a fatal crash was the age of the victim. That older people tend to die when hit by a vehicle in unsurprising but still relevant for decreasing collision fatalities. Transportation planners could focus on locations where older people were hit to learn more about how to prevent deaths in the future or target older New Yorkers in education campaigns.
 
-A particular interaction that was revealing was related to public transportation use in the area where a crash occurred. If a collision happened in a ZIP code where a higher percentage of people commute by public transport, it pushed the prediction of the Catboost model toward classifying the crash as non-fatal. Moreover, these ZIP codes also tended to have more complaints to 311 within the vicinity of a crash. This could suggest more citizen complaints would invite greater traffic enforcement, although more detailed research would be necessary to establish this. 
+A particular interaction that was revealing was related to public transportation use in the area where a crash occurred. If a collision happened in a ZIP code where a higher percentage of people commute by public transport, it pushed the prediction of the model toward classifying the crash as non-fatal. Moreover, these ZIP codes also tended to have more complaints to 311 within the vicinity of a crash. This could suggest more citizen complaints would invite greater traffic enforcement, although more detailed research would be necessary to establish this. 
 <figure style="text-align: center;">
-  <a href="/assets/img/nyc_streets_shap_plots.png">
-    <img style="max-width: 700px;" src="/assets/img/nyc_streets_shap_plots.png" alt="shap plots for four features" />
+  <a href="/assets/img/traffic_shap_waterfall1.png">
+    <img style="max-width: 700px;" src="/assets/img/traffic_shap_waterfall1.png" alt="SHAP plot for a correctly predicted fatal crash" />
   </a>
-  <figcaption>(SHAP plots for four features)</figcaption>
+  <figcaption>SHAP plot for a correctly predicted fatal crash</figcaption>
 </figure>
 As part of the Vision Zero program the NYC Department of Transportation has created several zones marked as "priority" under the program. If a crash was outside these zones, it contributed to the model predicting a fatal crash, while collisions inside these zones had the opposite effect. And while speed/red light cameras have decreased dangerous driving according to city studies, proximity to a cameras was associated with increasing the likelihood of a fatal prediction. But being within 200 meters of a camera generally contributed to the model predicting a non-fatal crash. This could be a sign transportation planners need to focus on other measures near cameras to improve safety in other respects.
 
 ## Next Steps, Improvements, Recommendations
 Perfect is the enemy of good, and at a certain point I had to stop tinkering with this model. I would like to do more work to improve the model's performance, and investigate what features, tuning or sampling techniques could work. In a real-world scenario this would depend on stakeholder input and needs. Ultimately the results provide actionable guidance to policymakers for educational campaigns, traffic engineering, and infrastructure improvements aimed at reducing traffic deaths.
 - In a future version I would want to change this to a multiclassificaiton problem with the minimum categories being: property damage only, injured, severely injured, and killed. New York's Department of Transportation has a program for reporting [more granular](https://www.nyc.gov/html/dot/downloads/pdf/sirta-report-q2-2023.pdf) injury statistics, but it only began reporting in 2022.
+- As part of the exploratory data analysis I found the top reason given in fatal crashes as a contributing factor was Pedestrian/Bicyclist Error, representing a third of cases. The crash data is compiled by NYPD at the scene of a crash, and when someone has died this implies a strong deference to the driver (think of the common refrain: "They came out of nowhere"). Therefore I would recommend a closer look at training for officers responding to motor vehicle crashes.
