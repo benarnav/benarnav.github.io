@@ -48,7 +48,7 @@ After trying a range of models and sampling techniques, I selected a `Catboost` 
   <figcaption></figcaption>
 </figure>
 
-<table align="center">
+<table style="text-align: center;">
   <tr>
     <th></th>
     <th>Precision</th>
