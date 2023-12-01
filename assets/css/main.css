@@ -112,7 +112,7 @@ sub {
     color: #fa8c00;
   }
   code.highlighter-rouge {
-    color: #fa8c00;
+    color: #00dca6;
   }
   svg, object.svg, img.svg {
     filter: invert(100%);
