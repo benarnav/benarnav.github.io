@@ -46,29 +46,10 @@ After trying a range of models and sampling techniques, I selected a `Catboost` 
     <img style="max-width: 600px;" src="/assets/img/traffic_confusion-pr_curve.jpg" alt="shap plots for four features" />
   </a>
   <figcaption>
-  <table>
-  <tr>
-    <th></th>
-    <th>Precision</th>
-    <th>Recall</th>
-    <th>F1 Score</th>
-    <th>Support</th>
-  </tr>
-  <tr>
-    <td>Injured</td>
-    <td>0.99</td>
-    <td>0.96</td>
-    <td>0.98</td>
-    <td>22051</td>
-  </tr>
-  <tr>
-    <td>Killed</td>
-    <td>0.08</td>
-    <td>0.34</td>
-    <td>0.13</td>
-    <td>231</td>
-  </tr>
-</table>
+|              | Precision | Recall | F1 Score | Support |
+|--------------|:-----:|-----------:|----------|:-------:|
+| Injured      |  0.99 |       0.96 | 0.98     | 22051   |
+| Killed       |  0.08 |       0.34 | 0.13     | 231     |
   </figcaption>
 </figure>
 
