@@ -48,15 +48,33 @@ After trying a range of models and sampling techniques, I selected a `Catboost` 
   <figcaption></figcaption>
 </figure>
 
-|              | Precision | Recall | F1 Score | Support |
-|--------------|:-----:|-----------:|----------|:-------:|
-| Injured      |  0.99 |       0.96 | 0.98     | 22051   |
-| Killed       |  0.08 |       0.34 | 0.13     | 231     |
+<table align="center">
+  <tr>
+    <th></th>
+    <th>Precision</th>
+    <th>Recall</th>
+    <th>F1 Score</th>
+    <th>Support</th>
+  </tr>
+  <tr>
+    <td>Injured</td>
+    <td>0.99</td>
+    <td>0.96</td>
+    <td>0.98</td>
+    <td>22051</td>
+  </tr>
+  <tr>
+    <td>Killed</td>
+    <td>0.08</td>
+    <td>0.34</td>
+    <td>0.13</td>
+    <td>231</td>
+  </tr>
+</table>
 
+Interpreting the `Catboost` model using `SHAP` values showed the single most important feature for predicting a fatal crash was the age of the victim. That older people tend to die when hit by a vehicle in unsurprising but still relevant for decreasing collision fatalities. Transportation planners could focus on locations where older people were hit to learn more about how to prevent deaths in the future or target older New Yorkers in education campaigns.
 
-Interpreting the Catboost model using `SHAP` values showed the single most important feature for predicting a fatal crash was the age of the victim. That older people tend to die when hit by a vehicle in unsurprising but still relevant for decreasing collision fatalities. Transportation planners could focus on locations where older people were hit to learn more about how to prevent deaths in the future or target older New Yorkers in education campaigns.
-
-A particular interaction that was revealing was related to public transportation use in the area where a crash occurred. If a collision happened in a ZIP code where a higher percentage of people commute by public transport, it pushed the prediction of the model toward classifying the crash as non-fatal. Moreover, these ZIP codes also tended to have more complaints to 311 within the vicinity of a crash. This could suggest more citizen complaints would invite greater traffic enforcement, although more detailed research would be necessary to establish this. 
+A particular interaction that was revealing was related to public transportation use in the area where a crash occurred. If a collision happened in a ZIP code where a higher percentage of people commute by public transport, it pushed the prediction of the model toward classifying the crash as non-fatal. Once that portion hit 30 percent, the effect became more pronounced. Moreover, these ZIP codes also tended to have more complaints to 311 within the vicinity of a crash. This could suggest more citizen complaints would invite greater traffic enforcement, although more detailed research would be necessary to establish this. 
 <figure style="text-align: center;">
   <a href="/assets/img/traffic_shap_waterfall1.png">
     <img style="max-width: 700px;" src="/assets/img/traffic_shap_waterfall1.png" alt="SHAP plot for a correctly predicted fatal crash" />
