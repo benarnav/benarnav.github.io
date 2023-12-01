@@ -45,10 +45,8 @@ After trying a range of models and sampling techniques, I selected a `Catboost` 
   <a href="/assets/img/traffic_confusion-pr_curve.jpg">
     <img style="max-width: 600px;" src="/assets/img/traffic_confusion-pr_curve.jpg" alt="shap plots for four features" />
   </a>
-  <figcaption></figcaption>
-</figure>
-<div style="text-align: center;">
-<table>
+  <figcaption>
+  <table>
   <tr>
     <th></th>
     <th>Precision</th>
@@ -71,7 +69,9 @@ After trying a range of models and sampling techniques, I selected a `Catboost` 
     <td>231</td>
   </tr>
 </table>
-</div>
+  </figcaption>
+</figure>
+
 Interpreting the `Catboost` model using `SHAP` values showed the single most important feature for predicting a fatal crash was the age of the victim. That older people tend to die when hit by a vehicle in unsurprising but still relevant for decreasing collision fatalities. Transportation planners could focus on locations where older people were hit to learn more about how to prevent deaths in the future or target older New Yorkers in education campaigns.
 
 A particular interaction that was revealing was related to public transportation use in the area where a crash occurred. If a collision happened in a ZIP code where a higher percentage of people commute by public transport, it pushed the prediction of the model toward classifying the crash as non-fatal. Once that portion hit 30 percent, the effect became more pronounced. Moreover, these ZIP codes also tended to have more complaints to 311 within the vicinity of a crash. This could suggest more citizen complaints would invite greater traffic enforcement, although more detailed research would be necessary to establish this. 
