@@ -24,12 +24,13 @@ image_url = image_element.get_attribute("src")
 response = requests.get(image_url)
 
 if response.status_code == 200:
-    timestamp = time.strftime("%Y%m%d_%H%M%S")
-    image_filename = f"{key}/image_{timestamp}.jpg"
-    if not os.path.exists(f"{key}/"):
-        os.makedirs(f"{key}/")
-    with open(image_filename, "wb") as file:
-        file.write(response.content)
+  timestamp = time.strftime("%Y%m%d_%H%M%S")
+  image_filename = f"{key}/image_{timestamp}.jpg"
+
+  if not os.path.exists(f"{key}/"):
+    os.makedirs(f"{key}/")
+  with open(image_filename, "wb") as file:
+    file.write(response.content)
 ```
 I collected images in three hour blocks in the afternoon, partially overlapping with rush hour, for one week in autumn. After collecting the images I created a custom dataset using [Roboflow](https://roboflow.com) to draw bounding boxes and create additional images (modifying existing images with techniques like shear, reversing or adding noise) and trained a YOLOv8 model. The model achieved a mAP50 of 0.9 and a mAP50-95 of 0.6, which as you will see was sufficient for this task.
 
