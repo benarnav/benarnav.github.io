@@ -45,13 +45,12 @@ After trying a range of models and sampling techniques, I selected a `Catboost` 
   <a href="/assets/img/traffic_confusion-pr_curve.jpg">
     <img style="max-width: 600px;" src="/assets/img/traffic_confusion-pr_curve.jpg" alt="shap plots for four features" />
   </a>
-  <figcaption>
+  <figcaption></figcaption>
+</figure>
 |              | Precision | Recall | F1 Score | Support |
 |--------------|:-----:|-----------:|----------|:-------:|
 | Injured      |  0.99 |       0.96 | 0.98     | 22051   |
 | Killed       |  0.08 |       0.34 | 0.13     | 231     |
-  </figcaption>
-</figure>
 
 Interpreting the `Catboost` model using `SHAP` values showed the single most important feature for predicting a fatal crash was the age of the victim. That older people tend to die when hit by a vehicle in unsurprising but still relevant for decreasing collision fatalities. Transportation planners could focus on locations where older people were hit to learn more about how to prevent deaths in the future or target older New Yorkers in education campaigns.
 
