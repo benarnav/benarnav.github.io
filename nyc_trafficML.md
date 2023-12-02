@@ -47,6 +47,7 @@ After trying a range of models and sampling techniques, I selected a `Catboost` 
   </a>
   <figcaption></figcaption>
 </figure>
+
 |              | Precision | Recall | F1 Score | Support |
 |--------------|:-----:|-----------:|----------|:-------:|
 | Injured      |  0.99 |       0.96 | 0.98     | 22051   |
