@@ -61,8 +61,8 @@ code.highlighter-rouge {
     color: #fa8c00;
 }
 table {
-  margin: 15px 0;
-  padding: 0; }
+  margin: 15px auto;
+  padding: 3; }
   table tr {
     border-top: 1px solid #cccccc;
     background-color: white;
