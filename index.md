@@ -8,7 +8,7 @@ I'm a data scientist who likes to tell stories.
 
 <font color='yellow'><h4>!-This website is currently under construction-!</h4></font>
 
-You can [e-mail me](mailto:contact_arnav.cc80e@aleeas.com) if you would like to chat about
+You can [e-mail me](mailto:contact_arnav.cc80e@aleeas.com) if you'd like to chat about
 new projects, cycling, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk) or ways to make the world a better place for all humans.
 
 If you're wondering "Does this site look like this on purpose? You seem technically capable...", 
