@@ -18,6 +18,10 @@ div.navbar {
     padding: 10px;
     background-color: #DEE;
 }
+.page-title {
+  text-align: center;
+  margin: 0;
+}
 
 li.post-item {
     display: table;
