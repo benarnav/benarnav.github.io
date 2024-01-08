@@ -2,7 +2,7 @@
 title: Quantifying New York's Surge in Illegal Mopeds Using Computer Vision
 layout: page
 ---
-A version of this research was published in the journal [Vital City](). I've also posted the [code/data](https://github.com/benarnav/nyc_streets/) if you're interested.
+A version of this research will be published in the journal [Vital City](https://www.vitalcitynyc.org). I've also posted the [code/data](https://github.com/benarnav/nyc_streets/) if you're interested.
 ## tl;dr
 I trained a custom object detection model using data collected ad hoc from a network of traffic cameras in an attempt to quantify the deluge of illegal gas-powered mopeds operating on New York's streets. I recorded over a thousand mopeds driving illegally and dangerously, and focused on a particularly concerning situation developing on an already congested bridge crossing.
 <figure style="text-align: center;">
