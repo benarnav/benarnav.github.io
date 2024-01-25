@@ -44,7 +44,7 @@ sampler = {"over_first":
 ```
 
 ## Results
-After trying a range of models and sampling techniques, I selected a `CatBoost` classifier based on it achieving the highest average precision score of 0.088. While this seems low, it must be compared against a dummy classifier which for this dataset would have a score of 0.010 (representing the 1 percent of the positive class or Killed). This represents a roughly nine fold improvement over a random guesser. A `Logistic Regression` model was also trained since it achieved the highest recall, but those results are not the focus her and for real-world deployment the `CatBoost` model would be more appropriate.  
+After trying a range of models and sampling techniques, I selected a `CatBoost` classifier based on it achieving the highest average precision score of 0.088. While this seems low, it must be compared against a dummy classifier which for this dataset would have a score of 0.010 (representing the 1 percent of the positive class or Killed). This represents a 750% improvement over a random guesser. A `Logistic Regression` model was also trained since it achieved the highest recall, but those results are not the focus her and for real-world deployment the `CatBoost` model would be more appropriate.  
 <figure style="text-align: center;">
   <a href="/assets/img/traffic_confusion-pr_curve.jpg">
     <img style="max-width: 600px;" src="/assets/img/traffic_confusion-pr_curve.jpg" alt="shap plots for four features" />
