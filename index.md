@@ -14,7 +14,7 @@ Read [my latest piece](https://www.vitalcitynyc.org/articles/the-lawless-state-o
 
 This piece was based on some of this research:
 * [Identifying illegal mopeds](https://benjaminarnav.com/moped_detector/) using computer vision
-* [Uncovering a gap](https://benjaminarnav.com/nyc_311/) between police claims and records on parking tickets
+* [Uncovering a gap](https://benjaminarnav.com/nyc_311/) between police claims and city records of parking tickets in NYC
 * Using [machine learning](https://benjaminarnav.com/nyc_trafficML/) to make New York's streets a little safer
 
 ## I like to tinker
