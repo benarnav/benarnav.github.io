@@ -1,5 +1,5 @@
 ---
-title: blog
+title: more
 layout: page
 blog_index: true
 permalink: blog/
