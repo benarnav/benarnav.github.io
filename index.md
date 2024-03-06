@@ -13,9 +13,9 @@ new projects, cycling, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:tar
 Read [my latest piece](https://www.vitalcitynyc.org/articles/the-lawless-state-of-new-yorks-streets){:target="_blank" rel="noopener"} on using data to understand the chaos of New York City streets.
 
 This piece was based on some of this research:
-* [Identifying illegal mopeds](https://benjaminarnav.com/moped_detector/) using computer vision
-* [Uncovering a gap](https://benjaminarnav.com/nyc_311/) between police claims and city records of parking tickets in NYC
-* Using [machine learning](https://benjaminarnav.com/nyc_trafficML/) to make New York's streets a little safer
+* [Identifying illegal mopeds](https://benjaminarnav.com/posts/moped_detector/) using computer vision
+* [Uncovering a gap](https://benjaminarnav.com/posts/nyc_311/) between police claims and city records of parking tickets in NYC
+* Using [machine learning](https://benjaminarnav.com/posts/nyc_trafficML/) to make New York's streets a little safer
 
 ## I like to tinker
 * I was tired of checking my phone for subway departures, so I built an [LED arrival board](https://benjaminarnav.com/posts/arrivals_rgb_display/) for my living room
