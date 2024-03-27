@@ -4,10 +4,10 @@ layout: page
 ---
 <h2>hi, i'm benjamin</h2>
 
-I'm a data scientist who likes to tell stories.
+I'm currently at the [Recurse Center](https://www.recurse.com) working on machine learning/AI and mechanistic interpretability.
 
 You can [e-mail me](mailto:contact_arnav.darkened639@8alias.com) if you'd like to chat about
-new projects, cycling, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans. I have a keen interest in transportation, infrastructure and improving local government, and I'm currently working on a natural language project related to music and trend cycles. 
+new projects, cycling, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans. I have a keen interest in transportation, infrastructure and improving local government, and I'm working at the edge of my abilities.
 
 ## I like to learn things and tell other people about them
 Read [my latest piece](https://www.vitalcitynyc.org/articles/the-lawless-state-of-new-yorks-streets){:target="_blank" rel="noopener"} on using data to understand the chaos of New York City streets.
