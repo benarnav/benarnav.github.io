@@ -4,13 +4,15 @@ layout: page
 ---
 <h2>hi, i'm benjamin</h2>
 
-I'm currently at the [Recurse Center](https://www.recurse.com) working on machine learning/AI and mechanistic interpretability.
+I'm currently at the [Recurse Center](https://www.recurse.com) working on the intersection of technical AI safety and AI governance, as well as mechanistic interpretability.
+
+I am also working on research related to bike lanes and empowering local communities to get the most out of cycling infrastructure. 
 
 You can [e-mail me](mailto:contact_arnav.darkened639@8alias.com) if you'd like to chat about
-new projects, cycling, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans. I have a keen interest in transportation, infrastructure and improving local government, and I'm working at the edge of my abilities.
+new projects, cycling, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans. Besides machine learning/artificial intelligence, I have a keen interest in transportation, infrastructure and improving local government.
 
 ## I like to learn things and tell other people about them
-Read [my latest piece](https://www.vitalcitynyc.org/articles/the-lawless-state-of-new-yorks-streets){:target="_blank" rel="noopener"} on using data to understand the chaos of New York City streets.
+Read [my latest piece](https://www.vitalcitynyc.org/articles/the-lawless-state-of-new-yorks-streets){:target="_blank" rel="noopener"} on using computer vision and official data to understand the chaos of New York City streets.
 
 This piece was based on some of this research:
 * [Identifying illegal mopeds](https://benjaminarnav.com/posts/moped_detector/) using computer vision
