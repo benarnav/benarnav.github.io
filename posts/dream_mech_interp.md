@@ -22,7 +22,7 @@ When the updating step is changed to go in the opposite direction, or `gradient 
 I wanted to see how the deepdream algorithm responded to a few concepts. What does it see when it looks at clouds? Can it tell the difference between a human eye and one belonging to an animal? How similar is a container ship and cruise ship to the model? How does it determine which of these two massive ships is which? What is it looking for; what is it looking at?
 
 <figure style="text-align: center;">
-    <img style="max-width: 800px;" src="/assets/img/dream_clouds.png" alt="deepdream in the clouds" />
+    <img style="max-width: 900px;" src="/assets/img/dream_clouds.png" alt="deepdream in the clouds" />
   <figcaption></figcaption>
 </figure>
 
@@ -77,7 +77,7 @@ I chose to focus on images of ships because they contain a lot of diverse elemen
 After recording the activations as these images move through the model, we can begin to see what parts of the model are responsible for correct predictions, and at those points what aspects of an image are most important. When the model is given a container ship, the repetitive boxy patterns manifest in earlier layers. Later on we see other layers picking up on the water around the ships. This makes intuitive sense and it's interesting to see how similar a collection of floating point numbers can learn to focus on the same things a human would. Similarly with cruise ships, the model seems to again focus on water, but also relies on the silhouette of the vessel, particularly the peaks formed by antennae.
 
 <figure style="text-align: center;">
-    <img style="max-width: 850px;" src="/assets/img/dream_activations.jpg" alt="deepdream layer activations" />
+    <img style="max-width: 900px; block; margin: auto;" src="/assets/img/dream_activations.jpg" alt="deepdream layer activations" />
   <figcaption><i>Image classifier dreaming of boxes, waves and antennae</i></figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ def blind_model(model, channel_counts, start_layer=20, top=4, blind_method=zero_
 ```
 
 <figure style="text-align: center;">
-    <img style="max-width: 900px;" src="/assets/img/dream_container_blind.png" alt="classifying images before and after blinding" />
+    <img style="max-width: 1000px; block; margin: auto;" src="/assets/img/dream_container_blind.png" alt="classifying images before and after blinding" />
   <figcaption><i>A lot of confusion after a lobotomy</i></figcaption>
 </figure>
 

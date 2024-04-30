@@ -8,5 +8,7 @@ layout: page
 
 ## Projects
 [Quantifying New York's Surge in Illegal Mopeds Using Computer Vision](/posts/moped_detector/)
+
 [How the NYPD Responds to Civilian Complaints on Street Safety](/posts/nyc_311/)
+
 [Understanding New York's Traffic Violence with Machine Learning](/posts/nyc_traffic_ML/)
