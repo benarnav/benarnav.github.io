@@ -3,7 +3,7 @@ title: Do image classifiers deepdream of electric sheep?
 layout: page
 ---
 ## tl;dr
-I built a simple deepdream algorithm to visualize what aspects of an image a machine learning model uses to make classification predictions. I then pinpointed the parts of the model that were responsible for making correct predictions of container ships and cruise ships in order to modify the model to effectively "blind" it, meaning it could no longer correctly predict an object I specified. 
+I built a simple deepdream algorithm to visualize what aspects of an image a machine learning model uses to make classification predictions. I then pinpointed the parts of the model that were responsible for making correct predictions of container ships and cruise ships in order to modify the model to effectively "blind" it. After a quick lobotomy it could no longer correctly predict the object I specified. 
 
 This investigation serves to inform how models interpret styles, themes and elements, and how we can begin to interpret and control the outputs by diving into its internal workings. It also raises the question: if we can understand how AI classifies an image, can we alter it—maliciously or not—to be blind to a specific object or style? Could we fool it and why would we want to?
 
