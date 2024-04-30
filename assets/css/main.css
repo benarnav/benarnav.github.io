@@ -149,6 +149,11 @@ figure {
     flex-wrap: wrap;
     justify-content: center;
 }
+@media only screen and (max-width: 600px) {
+  img {
+    max-width: 300px; 
+  }
+}
 div.post-co-authors {
     padding-top: 10px;
 }
