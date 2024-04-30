@@ -22,7 +22,7 @@ When the updating step is changed to go in the opposite direction, or `gradient 
 I wanted to see how the deepdream algorithm responded to a few concepts. What does it see when it looks at clouds? Can it tell the difference between a human eye and one belonging to an animal? How similar is a container ship and cruise ship to the model? How does it determine which of these two massive ships is which? What is it looking for; what is it looking at?
 
 <figure style="text-align: center;">
-    <img style="max-width: 900px; display: block; margin: auto;" src="/assets/img/dream_clouds.png" alt="deepdream in the clouds" />
+    <img style="max-width: 900px;" src="/assets/img/dream_clouds.png" alt="deepdream in the clouds" />
   <figcaption></figcaption>
 </figure>
 
@@ -100,7 +100,7 @@ def blind_model(model, channel_counts, start_layer=20, top=4, blind_method=zero_
 ```
 
 <figure style="text-align: center;">
-    <img style="max-width: 1000px; display: block; margin: auto;" src="/assets/img/dream_container_blind.png" alt="classifying images before and after blinding" />
+    <img style="max-width: 1000px; " src="/assets/img/dream_container_blind.png" alt="classifying images before and after blinding" />
   <figcaption><i>A lot of confusion after a lobotomy</i></figcaption>
 </figure>
 
