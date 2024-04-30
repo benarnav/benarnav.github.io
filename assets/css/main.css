@@ -132,7 +132,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: auto; 
+  margin: 0 auto; 
 }
 /* Stuff for posts */
 img.post-inline-image {
@@ -145,7 +145,6 @@ figure {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center contents horizontally */
-  align-items: center; /* Center contents vertically */
   text-align: center; /* Center any inline content within the figure */
 }
 div.post-co-authors {
