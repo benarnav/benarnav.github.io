@@ -142,10 +142,12 @@ img.post-inline-image {
     max-height: 100%;
 }
 figure {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center contents horizontally */
-  text-align: center; /* Center any inline content within the figure */
+    display: flex;
+    text-align: initial;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 div.post-co-authors {
     padding-top: 10px;
