@@ -61,7 +61,6 @@ def dream(
             else:
                 loss = loss_weight * loss_fn(layer_outputs[layer][:, channel, :, :])
 
-        # model.zero_grad()
         dream.grad = None
         loss.backward()
         dream.data += learning_rate * dream.grad
@@ -69,7 +68,7 @@ def dream(
 
     return dream
 ```
-I experimented with two loss functions, l2 norm and a Gram matrix. Using the Gram matrix in calculating the loss is typically used in [style transfer applications](https://arxiv.org/pdf/1508.06576){:target="_blank" rel="noopener"}, like taking a photograph of a dog and generating a new image of it in the style of a Picasso painting. In this context using this loss is designed to make the dreams follow the style of the input image. I also tried zeroing all the model gradients with `zero_grad()` but this caused the dream elements to quickly overwhelm the image, making interpretability more difficult. If your goal was to create interesting images though, this might be a better route.
+I experimented with two loss functions, l2 norm and a Gram matrix. Using the Gram matrix in calculating the loss is typically used in [style transfer applications](https://arxiv.org/pdf/1508.06576){:target="_blank" rel="noopener"}, like taking a photograph of a dog and generating a new image of it in the style of a Picasso painting. In this context using this loss is designed to make the dreams follow the style of the input image. Also, since the focus of the `dream` function is to modify the input image, we need to zero the gradients of the image tensor directly so they don't accumulate between epochs, unlike a typical training loop.
 
 ## Mechanistic interpretability: What makes a ship a ship? 
 I chose to focus on images of ships because they contain a lot of diverse elements. There are the natural aspects of the sea and clouds as well as distinctly engineered elements: the sharp lines of the hull, the repeated patterns of windows or containers and rows of antennae and smoke stacks.
