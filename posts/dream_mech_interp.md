@@ -5,7 +5,7 @@ layout: page
 ## tl;dr
 I built a simple deepdream algorithm to visualize what aspects of an image a machine learning model uses to make classification predictions. I then pinpointed the parts of the model that were responsible for correctly predicting ships in order to modify the model to effectively "blind" it. After a quick lobotomy it made wildly inaccurate predictions when fed the same images. 
 
-This investigation serves to inform how models interpret styles, themes and elements, and how we can begin to interpret and control the outputs by diving into its internal workings. It also raises the question: if we can understand how AI classifies an image, can we alter it—maliciously or not—to be blind to a specific object or style? Could we fool it and why would we want to?
+This investigation serves to inform how models interpret styles, themes and elements, and how we can begin to interpret and control the outputs by diving into its internal workings. It also raises the question: if we can understand how AI classifies an image, can we alter it—maliciously or not—to be blind to a specific object or style? And why would we want to?
 
 <figure style="text-align: center;">
     <img style="max-width: 800px;" src="/assets/img/dream_loss_funcs.png" alt="deepdream loss function comparison" />
@@ -13,11 +13,11 @@ This investigation serves to inform how models interpret styles, themes and elem
 </figure>
 
 ## Background
-The deepdream algorithm takes a machine learning model that was trained on an image dataset and feeds it new images, but instead of trying to predict what it sees, the model generates a new image revealing strange and psychedelic patterns. It often tries to understand elements of this new image based on the set it was trained on, generating eyes, animal faces and swirling shapes. It can even find animals hiding in clouds.
+The deepdream algorithm takes a machine learning model that was trained on an image dataset and feeds it new images, but instead of trying to predict what it sees, the model generates a new image revealing strange and psychedelic patterns. It was [originally developed](https://research.google/blog/inceptionism-going-deeper-into-neural-networks/){:target="_blank" rel="noopener"} at Google and often tries to understand elements of this new image based on the set it was trained on, generating eyes, animal faces and swirling shapes. It can even find animals hiding in clouds. 
 
-When training most machine learning models, a loss is calculated at each step that captures the difference between the model's predictions and actual target values. The model's goal is to minimize this loss by updating its parameters accordingly, and it knows how to do this update by using `gradient descent`. 
+When training most machine learning models, a loss is calculated at each step that captures the difference between the model's predictions and actual target values. The model's goal is to minimize this loss by updating its parameters accordingly, and it knows how to do this update by using gradient descent. 
 
-When the updating step is changed to go in the opposite direction, or `gradient ascent`, it uses this value to update the input image and reveal latent patterns. The resulting images are highly dependent on the [model architecture](https://miro.medium.com/v2/resize:fit:900/0*v4YDpwhBGF-B42E4.png){:target="_blank" rel="noopener"} and the dataset it was trained on. This technique can also be used in mechanistic interpretability to visualize what aspects of an image the model is using to make its predictions in each layer. 
+When the updating step is changed to go in the opposite direction, or gradient *ascent*, it uses this value to update the input image and reveal latent patterns. The resulting images are highly dependent on the [model architecture](https://miro.medium.com/v2/resize:fit:900/0*v4YDpwhBGF-B42E4.png){:target="_blank" rel="noopener"} and the dataset it was trained on. This technique can also be used in mechanistic interpretability to visualize what aspects of an image the model is using to make its predictions in each layer. 
 
 I wanted to see how the deepdream algorithm responded to a few concepts. What does it see when it looks at clouds? Can it tell the difference between a human eye and one belonging to an animal? How similar is a container ship and cruise ship to the model? How does it determine which of these two massive ships is which? What is it looking for; what is it looking at?
 
@@ -81,7 +81,7 @@ After recording the activations as these images move through the model, we can b
   <figcaption><i>Image classifier dreaming of boxes, waves and antennae</i></figcaption>
 </figure>
 
-But what if the image classifier no longer "knew" what a container or cruise ship was? If we focus on the activations that were most associated with a container vessel and zero them out or inject random noise, we can blind the model so it makes incorrect predictions. We pass the same activations that were used to visualize the crucial elements above to `blind_model` and see how it performs before and after.
+But what if the image classifier no longer knew how to recognize a container or cruise ship? If we focus on the activations that were most associated with a container vessel and zero them out or inject random noise, we can blind the model so it makes incorrect predictions. We pass the same activations that were used to visualize the crucial elements above to `blind_model` and see how it performs before and after.
 
 ```python
 Channel = namedtuple("Channel", ["layer", "channel"])
