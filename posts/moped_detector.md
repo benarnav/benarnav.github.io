@@ -6,9 +6,7 @@ A version of this research was published in the journal [Vital City](https://www
 ## tl;dr
 I trained a custom object detection model using data collected ad hoc from a network of traffic cameras in an attempt to quantify the deluge of illegal gas-powered mopeds operating on New York's streets. I recorded over a thousand mopeds driving illegally and dangerously, and focused on a particularly concerning situation developing on an already congested bridge crossing.
 <figure style="text-align: center;">
-  <a href="/assets/img/moped_examples_citywide.jpg">
-    <img style="max-width: 700px;" src="/assets/img/moped_examples_citywide.jpg" alt="mopeds found using object detection" />
-  </a>
+    <img style="max-width: 1000px;" src="/assets/img/moped_examples_citywide.jpg" alt="mopeds found using object detection" />
   <figcaption>Results from the object detection model</figcaption>
 </figure>
 
@@ -33,9 +31,7 @@ I collected images in three hour blocks in the afternoon, partially overlapping 
 ## Results
 I found over a thousand instances of mopeds operating illegally in Manhattan and Brooklyn, the most dense and most populous boroughs respectively. The object detection model revealed mopeds riding in bike lanes, pedestrian plazas and across bridges, all spaces that prohibit motorized vehicles. It's imperfect but allows us to begin to understand the problem and formulate solutions beyond occasional [police stings](https://www.thecity.nyc/2023/09/07/migrant-moped-nypd-raid-tasers/){:target="_blank" rel="noopener"} that create a severe financial burden for delivery workers, already some of the [most vulnerable New Yorkers](https://www.vitalcitynyc.org/articles/e-bike-fires-in-new-york-city){:target="_blank" rel="noopener"}. There were severe limitations which I address in the next section, but after reviewing the initial results from the model, I decided to focus on one particularly dangerous area where camera placement was optimal: the Manhattan entrance to the shared pedestrian/bicycle path across the 59th Street/Queensboro Bridge. This bike path forces pedestrians and bicycles to share one narrow lane for travel in both directions, and now increasingly includes fast-moving e-bikes and illegal mopeds.
 <figure style="text-align: center;">
-  <a href="/assets/img/mopeds_queensboro_bridge.jpg">
-    <img style="max-width: 700px;" src="/assets/img/mopeds_queensboro_bridge.jpg" alt="mopeds found using object detection" />
-  </a>
+    <img style="max-width: 1000px;" src="/assets/img/mopeds_queensboro_bridge.jpg" alt="mopeds found using object detection" />
   <figcaption>Mopeds illegally using the 59th Street/Queensboro Bridge bike lane</figcaption>
 </figure>
 I recorded <u>one moped roughly every five minutes</u> using the narrow span. That essentially guarantees encountering a gas-powered moped since it typically takes longer to cross the bridge by foot or bicycle. I also recorded about 50 mopeds using the bike lane on the iconic Brooklyn Bridge, seemingly undeterred by the police cruiser permanently stationed at the foot of the Brooklyn side of the path. 

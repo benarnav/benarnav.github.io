@@ -5,9 +5,7 @@ layout: page
 ## tl;dr
 I built a custom dataset and trained a machine learning model to understand how transportation planners could reduce traffic deaths in New York City. I found neighborhoods with a higher percentage of people who commute by public transit contributed to the model predicting a crash as non-fatal and crashes within zones designated as a priority by policy makers had a similar effect.
 <figure style="text-align: center;">
-  <a href="/assets/img/nyc_streets_shap_plots.png">
-    <img style="max-width: 700px;" src="/assets/img/nyc_streets_shap_plots.png" alt="shap plots for four features" />
-  </a>
+    <img style="max-width: 950px;" src="/assets/img/nyc_streets_shap_plots.png" alt="shap plots for four features" />
   <figcaption>SHAP plots for four features</figcaption>
 </figure>
 
@@ -46,9 +44,7 @@ sampler = {"over_first":
 ## Results
 After trying a range of models and sampling techniques, I selected a `CatBoost` classifier based on it achieving the highest average precision score of 0.088. While this seems low, it must be compared against a dummy classifier which for this dataset would have a score of 0.010 (representing the 1 percent of the positive class or Killed). This represents a 750% improvement over a random guesser. A `Logistic Regression` model was also trained since it achieved the highest recall, but those results are not the focus her and for real-world deployment the `CatBoost` model would be more appropriate.  
 <figure style="text-align: center;">
-  <a href="/assets/img/traffic_confusion-pr_curve.jpg">
-    <img style="max-width: 600px;" src="/assets/img/traffic_confusion-pr_curve.jpg" alt="shap plots for four features" />
-  </a>
+    <img style="max-width: 700px;" src="/assets/img/traffic_confusion-pr_curve.jpg" alt="shap plots for four features" />
   <figcaption></figcaption>
 </figure>
 
@@ -61,9 +57,7 @@ Interpreting the `CatBoost` model using `SHAP` values showed the single most imp
 
 The model also revealed the potential impact of commuting habits on collision outcomes. If a crash happened in a ZIP code where a higher percentage of people who commute by public transport, it pushed the prediction of the model toward classifying the crash as non-fatal. Once that proportion hit 30 percent, the effect became more pronounced. Moreover, these ZIP codes also tended to have more complaints about traffic safety within the vicinity of a crash. This could suggest more citizen complaints would invite greater traffic enforcement, although more detailed research would be necessary to establish this. 
 <figure style="text-align: center;">
-  <a href="/assets/img/traffic_shap_waterfall1.png">
-    <img style="max-width: 700px;" src="/assets/img/traffic_shap_waterfall1.png" alt="SHAP plot for a correctly predicted fatal crash" />
-  </a>
+    <img style="max-width: 900px;" src="/assets/img/traffic_shap_waterfall1.png" alt="SHAP plot for a correctly predicted fatal crash" />
   <figcaption>SHAP plot for a correctly predicted fatal crash</figcaption>
 </figure>
 As part of the Vision Zero program the NYC Department of Transportation has created several zones marked as "priority" under the program. If a crash was outside these zones, it contributed to the model predicting a fatal crash, while collisions inside these zones had the opposite effect. And while speed/red light cameras have decreased dangerous driving according to city studies, proximity to a cameras was associated with increasing the likelihood of a fatal prediction. But being within 200 meters of a camera generally contributed to the model predicting a non-fatal crash. This could be a sign transportation planners need to focus on other measures near cameras to improve safety in other respects.

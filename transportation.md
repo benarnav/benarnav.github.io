@@ -11,4 +11,4 @@ layout: page
 
 [How the NYPD Responds to Civilian Complaints on Street Safety](/posts/nyc_311/)
 
-[Understanding New York's Traffic Violence with Machine Learning](/posts/nyc_traffic_ML/)
+[Understanding New York's Traffic Violence with Machine Learning](/posts/nyc_trafficML/)
