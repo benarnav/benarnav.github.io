@@ -128,12 +128,6 @@ sub {
     color: #fe8019;
   }
 }
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto; 
-}
 /* Stuff for posts */
 img.post-inline-image {
     display: block;
@@ -149,9 +143,17 @@ figure {
     flex-wrap: wrap;
     justify-content: center;
 }
-@media only screen and (max-width: 600px) {
+img {
+  max-width: 160%;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+}
+@media only screen and (max-width: 768px) {
   img {
-    max-width: 300px; 
+    width: 100%; 
+    max-width: 110%;
+    height: auto; 
   }
 }
 div.post-co-authors {
