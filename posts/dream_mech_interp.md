@@ -112,4 +112,4 @@ Understanding how an image classifier makes specific predictions can be extremel
 
 Even though `VGG19` is no longer a cutting-edge AI architecture, it's still widely used in transfer learning where its weights serve as the basis when developing new models. Depending on available resources it may be an appropriate choice for some computer vision tasks. Developing a deeper understanding of how these models work is crucial, as is finding ways to visualize these elements to communicate these concepts to a wide audience. 
 
-The complete code for this project can be found [here]().
+The complete code for this project can be found [here](https://github.com/benarnav/deepdream-mech-interp).
