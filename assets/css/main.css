@@ -145,14 +145,14 @@ figure {
     align-self: center;
     flex-direction: column;
 }
-figcaption{
+figcaption {
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
 img {
   max-width: 100%;
 }
-.img-div{
+.img-div {
   align-self: center;
 }
 .img-solo {
