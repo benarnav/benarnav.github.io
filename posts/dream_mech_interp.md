@@ -72,7 +72,7 @@ I chose to focus on images of ships because they contain a lot of diverse elemen
 
 After recording the activations as these images move through the model, we can begin to see what parts of the model are responsible for correct predictions, and at those points what aspects of an image are most important. When the model is given a container ship, the repetitive boxy patterns manifest in earlier layers. Later on we see other layers picking up on the water around the ships. This makes intuitive sense and it's interesting to see how similar a collection of floating point numbers can learn to focus on the same things a human would. Similarly with cruise ships, the model seems to again focus on water, but also relies on the silhouette of the vessel, particularly the peaks formed by antennae.
 
-<figure class="oversize=figure">
+<figure class="oversize-figure">
     <img src="/assets/img/dream_activations.jpg" alt="deepdream layer activations" />
   <figcaption>Image classifier dreaming of boxes, waves and antennae</figcaption>
 </figure>
@@ -95,7 +95,7 @@ def blind_model(model, channel_counts, start_layer=20, top=4, blind_method=zero_
     return model
 ```
 
-<figure class="oversize=figure">
+<figure class="oversize-figure">
     <img src="/assets/img/dream_container_blind.png" alt="classifying images before and after blinding" />
   <figcaption>A lot of confusion after a lobotomy</figcaption>
 </figure>
