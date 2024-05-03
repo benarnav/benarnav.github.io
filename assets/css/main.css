@@ -152,10 +152,8 @@ figcaption {
 img {
   max-width: 100%;
 }
-.img-div {
+.img-solo-div {
   align-self: center;
-}
-.img-solo {
   width: 140%;
 }
 
@@ -166,7 +164,7 @@ img {
   img {
     max-width: 100%;
   }
-  .img-solo {
+  .img-solo-div {
     width: 100%;
   }
 }
