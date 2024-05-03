@@ -21,7 +21,6 @@ div.navbar {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 li.post-item {
     display: table;
@@ -141,29 +140,28 @@ img.post-inline-image {
 }
 figure {
     display: flex;
-    text-align: initial;
+    /* text-align: initial; */
     align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 140%
+    /* align-content: center; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    width: 140%;
+    align-self: center;
+    flex-direction: column;
 }
 figcaption{
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto; 
+.image-solo {
+  width: 140%;
 }
 @media only screen and (max-width: 768px) {
   figure {
     width: 100%
   }
-  img {
-    height: auto; 
+  .image-solo {
+    width: 140%;
   }
 }
 div.post-co-authors {
