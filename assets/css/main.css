@@ -18,7 +18,11 @@ div.navbar {
     padding: 10px;
     background-color: #DEE;
 }
-
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 li.post-item {
     display: table;
     width: 100%;
@@ -142,17 +146,23 @@ figure {
     align-content: center;
     flex-wrap: wrap;
     justify-content: center;
+    width: 140%
+}
+figcaption{
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 img {
-  max-width: 160%;
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto; 
 }
 @media only screen and (max-width: 768px) {
+  figure {
+    width: 100%
+  }
   img {
-    width: 130%; 
-    max-width: 130%;
     height: auto; 
   }
 }
