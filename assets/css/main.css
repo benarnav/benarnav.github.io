@@ -140,11 +140,7 @@ img.post-inline-image {
 }
 figure {
     display: flex;
-    /* text-align: initial; */
     align-items: center;
-    /* align-content: center; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
     width: 140%;
     align-self: center;
     flex-direction: column;
@@ -153,15 +149,25 @@ figcaption{
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
-.image-solo {
+img {
+  max-width: 100%;
+}
+.img-div{
+  align-self: center;
+}
+.img-solo {
   width: 140%;
 }
+
 @media only screen and (max-width: 768px) {
   figure {
     width: 100%
   }
-  .image-solo {
-    width: 140%;
+  img {
+    max-width: 100%;
+  }
+  .img-solo {
+    width: 100%;
   }
 }
 div.post-co-authors {
