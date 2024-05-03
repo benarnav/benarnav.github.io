@@ -156,7 +156,6 @@ img {
   align-self: center;
   width: 140%;
 }
-
 @media only screen and (max-width: 768px) {
   figure {
     width: 100%
@@ -171,7 +170,6 @@ img {
 div.post-co-authors {
     padding-top: 10px;
 }
-
 div.footnotes {
   position: relative;
   display: inline-block;
