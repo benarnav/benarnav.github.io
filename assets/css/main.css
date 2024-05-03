@@ -141,9 +141,12 @@ img.post-inline-image {
 figure {
     display: flex;
     align-items: center;
-    width: 140%;
+    width: 100%;
     align-self: center;
     flex-direction: column;
+}
+.oversize-figure {
+    width: 140%;
 }
 figcaption {
   padding-top: 1rem;
@@ -160,6 +163,9 @@ img {
   figure {
     width: 100%
   }
+  .oversize-figure {
+    width: 100%;
+}
   img {
     max-width: 100%;
   }

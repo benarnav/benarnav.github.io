@@ -7,8 +7,8 @@ I've [posted the code](https://github.com/benarnav/arrivals-board) for the displ
 
 ## tl;dr
 I live about a block away from a subway station and if I move quickly, I can get from my apartment to the platform in about 3 minutes. I've found myself frequently checking arrival times for the next trains, but manually hitting refresh on a website as I'm getting ready to leave is not ideal. So I built a wall-mounted display that shows transit information.
-<figure style="text-align: center;">
-    <img style="max-width: 700px;" src="/assets/img/arrivals_default.jpeg" alt="default screen for arrivals display" />
+<figure>
+    <img src="/assets/img/arrivals_default.jpeg" alt="default screen for arrivals display" />
   <figcaption></figcaption>
 </figure>
 
@@ -21,8 +21,8 @@ The default screen also shows the time, current temperature and AQI level. The A
 ## Data fit for a microcontroller
 The NYC Subway API uses protocol buffers for their data. The packages needed to decode the datafeeds are too large for a microcontroller, so I built a `Flask` webapp that prepares the data for the display. That app is hosted on [Python Anywhere](www.pythonanywhere.com){:target="_blank" rel="noopener"}. This setup only requires you obtain a [free API key](https://new.mta.info/developers){:target="_blank" rel="noopener"} from the MTA. Specifying the subway lines and station info that's displayed is handled by headers in the API call to the Flask app. The webapp sends the data in `json` format and organizes arrivals into Northbound and Southbound trains and alerts.  
 
-<figure style="text-align: center;">
-    <img style="max-width: 700px;" src="/assets/img/arrivals_board.gif" alt="expanded arrivals screen" />
+<figure>
+    <img src="/assets/img/arrivals_board.gif" alt="expanded arrivals screen" />
   <figcaption></figcaption>
 </figure>
 
