@@ -145,16 +145,15 @@ figure {
     align-self: center;
     flex-direction: column;
 }
-.oversize-figure {
-    width: 140%;
-}
 figcaption {
   padding-top: 1rem;
-  padding-bottom: 1rem;
   font-style: italic;
 }
 img {
   max-width: 100%;
+}
+.oversize-figure {
+    width: 140%;
 }
 .img-solo-div {
   align-self: center;
