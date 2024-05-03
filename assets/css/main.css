@@ -158,6 +158,10 @@ img {
 }
 .img-solo-div {
   align-self: center;
+  width: 100%;
+}
+.img-solo-div-oversize {
+  align-self: center;
   width: 140%;
 }
 @media only screen and (max-width: 768px) {
@@ -171,6 +175,9 @@ img {
     max-width: 100%;
   }
   .img-solo-div {
+    width: 100%;
+  }
+  .img-solo-div-oversize {
     width: 100%;
   }
 }

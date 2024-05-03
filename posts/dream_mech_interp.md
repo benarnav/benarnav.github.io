@@ -20,7 +20,7 @@ When training most machine learning models, a loss is calculated at each step th
 When the updating step is changed to go in the opposite direction, or gradient *ascent*, it uses this value to update the input image and reveal latent patterns. The resulting images are highly dependent on the [model architecture](https://miro.medium.com/v2/resize:fit:900/0*v4YDpwhBGF-B42E4.png){:target="_blank" rel="noopener"} and the dataset it was trained on. This technique can also be used in mechanistic interpretability to visualize what aspects of an image the model is using to make its predictions in each layer. 
 
 I wanted to see how the deepdream algorithm responded to a few concepts. What does it see when it looks at clouds? Can it tell the difference between a human eye and one belonging to an animal? How similar is a container ship and cruise ship to the model? How does it determine which of these two massive ships is which? What is it looking for; what is it looking at?
-<div class="img-solo-div">
+<div class="img-solo-div-oversize">
 <img src="/assets/img/dream_clouds.png" alt="deepdream in the clouds" />
 </div>
 I used a `VGG19` image classifier pretrained on the `ImageNet-1k` dataset. First, we hook into the model to record the outputs of each layer. Then we pass an image into the `dream` function and see what effect each layer is responsible for. 
