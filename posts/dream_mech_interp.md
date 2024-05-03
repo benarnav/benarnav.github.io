@@ -9,7 +9,7 @@ This investigation serves to inform how models interpret styles, themes and elem
 
 <figure>
     <img src="/assets/img/dream_loss_funcs.png" alt="deepdream loss function comparison" />
-  <figcaption><i>Owl or Android?</i></figcaption>
+  <figcaption>Owl or Android?</figcaption>
 </figure>
 
 ## Background
@@ -74,7 +74,7 @@ After recording the activations as these images move through the model, we can b
 
 <figure class="oversize=figure">
     <img src="/assets/img/dream_activations.jpg" alt="deepdream layer activations" />
-  <figcaption><i>Image classifier dreaming of boxes, waves and antennae</i></figcaption>
+  <figcaption>Image classifier dreaming of boxes, waves and antennae</figcaption>
 </figure>
 
 But what if the image classifier no longer knew how to recognize a container or cruise ship? If we focus on the activations that were most associated with a container vessel and zero them out or inject random noise, we can blind the model so it makes incorrect predictions. We pass the same activations that were used to visualize the crucial elements above to `blind_model` and see how it performs before and after.
@@ -97,7 +97,7 @@ def blind_model(model, channel_counts, start_layer=20, top=4, blind_method=zero_
 
 <figure class="oversize=figure">
     <img src="/assets/img/dream_container_blind.png" alt="classifying images before and after blinding" />
-  <figcaption><i>A lot of confusion after a lobotomy</i></figcaption>
+  <figcaption>A lot of confusion after a lobotomy</figcaption>
 </figure>
 
 After blinding it can no longer correctly predict container ships. It manages in once case but the confidence drops markedly and to a level that would typically be ignored. The model can largely still identify "ocean liners" except in one case, showing that there are not enough shared activations between the two classes so that blinding the model to one class cripples it for the other. The model also still mostly classifies the control images correctly. Interestingly, while it fails to classify the speedboat image, it still knows it's some type of water vessel. 

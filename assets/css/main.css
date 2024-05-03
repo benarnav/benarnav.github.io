@@ -150,7 +150,8 @@ figure {
 }
 figcaption {
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  font-style: italic;
 }
 img {
   max-width: 100%;

@@ -7,10 +7,9 @@ I've [posted the code](https://github.com/benarnav/arrivals-board) for the displ
 
 ## tl;dr
 I live about a block away from a subway station and if I move quickly, I can get from my apartment to the platform in about 3 minutes. I've found myself frequently checking arrival times for the next trains, but manually hitting refresh on a website as I'm getting ready to leave is not ideal. So I built a wall-mounted display that shows transit information.
-<figure>
+<div class="img-solo-div">
     <img src="/assets/img/arrivals_default.jpeg" alt="default screen for arrivals display" />
-  <figcaption></figcaption>
-</figure>
+</div>
 
 ## Overview
 
