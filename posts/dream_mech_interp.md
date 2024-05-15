@@ -3,9 +3,10 @@ title: Do image classifiers deepdream of electric sheep?
 layout: page
 ---
 ## tl;dr
+This investigation serves to inform how deep learning models interpret styles, themes and elements, and how we can begin to interpret and control the outputs by diving into the internal workings. It also raises the question: if we can understand how AI classifies an image, can we alter it—maliciously or not—to be blind to a specific object or style? And why would we want to?
+
 I built a simple deepdream algorithm to visualize what aspects of an image a machine learning model uses to make classification predictions. I then pinpointed the parts of the model that were responsible for correctly predicting a variety of objects in order to modify the internal parameters to effectively "blind" it. After a quick lobotomy it made wildly inaccurate predictions when fed the same images. 
 
-This investigation serves to inform how models interpret styles, themes and elements, and how we can begin to interpret and control the outputs by diving into its internal workings. It also raises the question: if we can understand how AI classifies an image, can we alter it—maliciously or not—to be blind to a specific object or style? And why would we want to?
 
 <figure>
     <img src="/assets/img/dream_loss_funcs.png" alt="deepdream loss function comparison" />
@@ -17,13 +18,13 @@ The deepdream algorithm takes a machine learning model that was trained on an im
 
 When training most machine learning models, a loss is calculated at each step that captures the difference between the model's predictions and actual target values. The model's goal is to minimize this loss by updating its parameters accordingly, and it knows how to do this update by using gradient descent. 
 
-When the updating step is changed to go in the opposite direction, or gradient *ascent*, it uses this value to update the input image and reveal latent patterns. The resulting images are highly dependent on the [model architecture](https://miro.medium.com/v2/resize:fit:900/0*v4YDpwhBGF-B42E4.png){:target="_blank" rel="noopener"} and the dataset it was trained on. This technique can also be used in mechanistic interpretability to visualize what aspects of an image the model is using to make its predictions in each layer. 
+When the updating step is changed to go in the opposite direction, or gradient *ascent*, it uses this value to update the input image, generating the dream image and revealing latent patterns. The resulting images are highly dependent on the [model architecture](https://miro.medium.com/v2/resize:fit:900/0*v4YDpwhBGF-B42E4.png){:target="_blank" rel="noopener"} and the dataset it was trained on. This technique can also be used in mechanistic interpretability to visualize what aspects of an image the model is using to make its predictions in each layer. 
 
 I wanted to see how the deepdream algorithm responded to a few concepts. What does it see when it looks at clouds? Can it tell the difference between a human eye and one belonging to an animal? How similar is a container ship and cruise ship to the model? How does it determine which of these two massive ships is which? What is it looking for; what is it looking at?
 <div class="img-solo-div-oversize">
 <img src="/assets/img/dream_clouds.png" alt="deepdream in the clouds" />
 </div>
-I used a `VGG19` image classifier pretrained on the `ImageNet-1k` dataset. First, we hook into the model to record the outputs of each layer. Then we pass an image into the `dream` function and see what effect each layer is responsible for. 
+I used a `VGG19` image classifier pretrained on the `ImageNet-1k` dataset. First, we hook into the model to record the outputs of each layer. Then we pass an image into the `dream` function and can see what effect each layer is responsible for. In an initial test using a photograph of clouds over the ocean taken by Allan Sekula, the model saw elements of animals it was trained on appearing in the cumulus. 
 
 ```python
 def gram_matrix(img):
@@ -77,7 +78,7 @@ After recording the activations as these images move through the model, we can b
   <figcaption>Image classifier dreaming of boxes, waves and antennae</figcaption>
 </figure>
 
-But what if the image classifier no longer knew how to recognize a container or cruise ship? If we focus on the activations that were most associated with a container vessel and zero them out or inject random noise, we can blind the model so it makes incorrect predictions. We pass the same activations that were used to visualize the crucial elements above to `blind_model` and see how it performs before and after.
+But what if the image classifier no longer knew how to recognize a container or cruise ship? If we focus on the activations that were most associated with a container vessel—by analyzing the outputs recorded from the hooked model—and zero them out or inject random noise, we can blind the model so it makes incorrect predictions. We pass the same activations that were used to visualize the crucial elements above to `blind_model` and see how it performs before and after.
 
 ```python
 Channel = namedtuple("Channel", ["layer", "channel"])
