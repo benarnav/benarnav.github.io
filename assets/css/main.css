@@ -131,6 +131,37 @@ sub {
     color: #fe8019;
   }
 }
+@media (prefers-color-scheme: light) {
+  body {
+    color: #dfdfdf;
+    background: #101010;
+  }
+  div.navbar {
+    background-color: #212121;
+  }
+  a[href] {
+    color: #00dca6;
+  }
+  a[href]:visited {
+    color: #fa8c00;
+  }
+  code.highlighter-rouge {
+    color: #00dca6;
+  }
+  svg, object.svg, img.svg {
+    filter: invert(100%);
+  }
+  table tr {
+    border-top: 1px solid #555;
+    background-color: #121212;
+  }
+  table tr:nth-child(2n) {
+    background-color: #212121;
+  }
+  li code, p code {
+    color: #fe8019;
+  }
+}
 /* Stuff for posts */
 img.post-inline-image {
     display: block;
