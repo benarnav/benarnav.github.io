@@ -148,6 +148,7 @@ figure {
 figcaption {
   padding-top: 1rem;
   font-style: italic;
+  text-align: center;
 }
 img {
   max-width: 100%;
