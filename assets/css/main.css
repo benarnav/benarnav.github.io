@@ -23,6 +23,7 @@ div.navbar {
 .container {
   display: flex;
   flex-direction: column;
+  text-align: justify;
 }
 li.post-item {
     display: table;
