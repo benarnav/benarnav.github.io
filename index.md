@@ -4,9 +4,7 @@ layout: page
 ---
 <h2>hi, i'm benjamin</h2>
 
-I'm currently at the [Recurse Center](https://www.recurse.com) working on the intersection of technical AI safety and AI governance, as well as mechanistic interpretability.
-
-I am also working on research related to bike lanes and empowering local communities to get the most out of cycling infrastructure. 
+I'm currently at the [Recurse Center](https://www.recurse.com) working on the intersection of technical AI safety and AI governance, as well as mechanistic interpretability. I am also working on research related to bike lanes and empowering local communities to get the most out of cycling infrastructure. 
 
 You can [e-mail me](mailto:contact_arnav.darkened639@8alias.com) if you'd like to chat about
 new projects, cycling, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans. Besides machine learning/artificial intelligence, I have a keen interest in transportation, infrastructure and improving local government.
