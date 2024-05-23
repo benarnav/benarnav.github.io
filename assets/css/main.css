@@ -2,6 +2,8 @@
 
 body {
     font-family: serif;
+    color: #dfdfdf;
+    background: #101010;
 }
 div.pagecontents {
     margin: 30px auto 0px auto;
