@@ -19,7 +19,7 @@ Enter: The C Programming Language. It was the first language I learned and I've 
 
 ## The Algorithm
 
-<figure class="oversize-figure">
+<figure class="figure">
     <img src="/assets/img/bytephase_fig.jpg" alt="bpe toy example" />
   <figcaption>Tokens learned using the BPE algorithm</figcaption>
 </figure>
@@ -83,10 +83,11 @@ def train(self, file_path: str, vocab_size: int) -> None:
     text_stats = dict(text_stats)
 
     num_merges = vocab_size - 257
+    # This call to `train` is implemented in C
     merges = train(text_stats, len(text_stats), num_merges)
 
     self.decode_dict = {idx: bytes([idx]) for idx in range(256)}
-    self.decode_dict[256] = bytes("<|endoftext|>".encode("utf-8"))
+    self.decode_dict[self.eos_token_idx] = self.eos_token.encode("utf-8")
 
     idx = 257
     for merge in merges:
