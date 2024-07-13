@@ -1,5 +1,5 @@
 ---
-title: Byte by Byte - Optimizing tokenization for large language models
+title: Byte by Byte:Optimizing tokenization for large language models
 layout: page
 ---
 
