@@ -19,6 +19,11 @@ Enter: The C Programming Language. It was the first language I learned and I've 
 
 ## The Algorithm
 
+<figure class="oversize-figure">
+    <img src="/assets/img/bytephase_fig.jpg" alt="bpe toy example" />
+  <figcaption>Tokens learned using the BPE algorithm</figcaption>
+</figure>
+
 The byte-pair encoding algorithm proposed by Sennrich et al. iteratively merges the most frequent pair of characters or character sequences, effectively learning a vocabulary of subword units. This approach allows the model to handle rare words and morphologically rich languages more effectively. The GPT-2 paper adapted this technique to operate directly on bytes rather than Unicode characters, introducing a clever twist: by processing raw bytes, the tokenizer can handle any string of text without the need for pre-processing, effectively creating a universal tokenizer. This byte-level BPE maintains the benefits of subword tokenization while eliminating issues with different encodings or languages, making it particularly well-suited for training large, multilingual language models.
 
 The BPE algorithm begins by splitting words into individual bytes and counting their frequencies. It then iteratively merges the most frequent adjacent pair of tokens, creating a new token from this pair, and adds it to the vocabulary. This process continues until a desired vocabulary size is reached or no more merges are possible, resulting in a final vocabulary of subword units that efficiently represents the training corpus.
