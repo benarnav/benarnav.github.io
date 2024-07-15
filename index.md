@@ -1,5 +1,5 @@
 ---
-title:
+title: hi, i'm benjamin
 layout: page
 ---
 
