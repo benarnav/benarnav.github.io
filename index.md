@@ -2,6 +2,7 @@
 title:
 layout: page
 ---
+
 ## hi, i'm benjamin
 
 I'm an engineer and researcher focused on building AI that's aligned with human values. I am also working on research related to transportation policy, government responsiveness to citizen complaints and empowering local communities to get the most out of cycling infrastructure.
@@ -10,7 +11,7 @@ I'm was recently at the [Recurse Center](https://www.recurse.com) working on the
 
 - An [LLM tokenizer](/posts/bytephase.md) in Python that uses C extensions to optimize performance
 - An implementation of GPT-2 where I only relied on research papers for reference
-- A deepdream algorithm to visualize parameters of a CNN image classifier and developed methods to blind the model to specific objects using principles of mechanistic interpretability
+- A [deepdream algorithm](/posts/dream_mech_interp.md) to visualize parameters of a CNN image classifier and developed methods to blind the model to specific objects using principles of mechanistic interpretability
 
 You can [e-mail me](mailto:contact_arnav.darkened639@8alias.com) if you'd like to chat about
 new projects, cycling, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans.
