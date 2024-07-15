@@ -3,8 +3,6 @@ title:
 layout: page
 ---
 
-## hi, i'm benjamin
-
 I'm an engineer and researcher focused on building AI that's aligned with human values. I am also working on research related to transportation policy, government responsiveness to citizen complaints and empowering local communities to get the most out of cycling infrastructure.
 
 I'm was recently at the [Recurse Center](https://www.recurse.com) working on the intersection of technical AI safety and AI governance, as well as mechanistic interpretability. While I was there I built a lot of things, including:
