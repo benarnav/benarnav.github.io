@@ -5,10 +5,10 @@ layout: page
 
 I'm an engineer and researcher focused on building AI that's aligned with human values. I am also working on research related to transportation policy, government responsiveness to citizen complaints and empowering local communities to get the most out of cycling infrastructure.
 
-I'm was recently at the [Recurse Center](https://www.recurse.com) working on the intersection of technical AI safety and AI governance, as well as mechanistic interpretability. While I was there I built a lot of things, including:
+I'm recently attended a programming residency at the [Recurse Center](https://www.recurse.com){:target="_blank" rel="noopener"}, working on projects related to technical AI safety and AI governance. While I was there I built a lot of things, including:
 
 - An [LLM tokenizer](/posts/bytephase.md) in Python that uses C extensions to optimize performance
-- An implementation of GPT-2 where I only relied on research papers for reference
+- An implementation of [GPT-2](https://github.com/benarnav/gpt2) where I only relied on research papers for reference
 - A [deepdream algorithm](/posts/dream_mech_interp.md) to visualize parameters of a CNN image classifier and developed methods to blind the model to specific objects using principles of mechanistic interpretability
 
 You can [e-mail me](mailto:contact_arnav.darkened639@8alias.com) if you'd like to chat about
