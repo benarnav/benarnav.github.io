@@ -5,7 +5,7 @@ layout: page
 
 ## tl;dr
 
-I was implementing an LLM from scratch using only research papers and was frustrated by the slow performance of my Python tokenizer, so I built one in C. `bytephase` is a high-performance byte-pair tokenizer that uses a hybrid architecture with a Python API and C extensions for core operations. 
+I was implementing an LLM from scratch using only research papers and was frustrated by the slow performance of my Python tokenizer, so I built one in C. `bytephase` is a high-performance [byte-pair tokenizer](https://github.com/benarnav/bytephase){:target="_blank" rel="noopener"} that uses a hybrid architecture with a Python API and C extensions for core operations. 
 
 It uses a trie-based encoding approach to achieve tokenization speeds of 2.41M tokens/sec, significantly outperforming many existing solutions.  Training the tokenizer is over 3,000 times faster compared to a reference Python implementation by [Andrej Karpathy](https://github.com/karpathy/minbpe){:target="_blank" rel="noopener"}. This project demonstrates my ability to optimize critical ML pipeline components and implement novel solutions based on academic papers. The development process provided deep insights into low-level LLM operations, demonstrating expertise in both theoretical and practical aspects of AI system optimization.
 
