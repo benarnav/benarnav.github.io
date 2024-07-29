@@ -9,7 +9,7 @@ I recently attended a programming residency at the [Recurse Center](https://www.
 
 - An [LLM tokenizer](/posts/bytephase.md) in Python that uses C extensions to optimize performance
 - An implementation of [GPT-2](https://github.com/benarnav/gpt2) where I only relied on research papers for reference
-- A [deepdream algorithm](/posts/dream_mech_interp.md) to visualize parameters of a CNN image classifier and developed methods to blind the model to specific objects using principles of mechanistic interpretability
+- A [deepdream algorithm](/posts/dream_mech_interp.md) to visualize parameters of a CNN image classifier and developed methods to "blind" the model to specific objects using principles of mechanistic interpretability
 
 You can [e-mail me](mailto:contact_arnav.darkened639@8alias.com) if you'd like to chat about
 new projects, cycling, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans.
