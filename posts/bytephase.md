@@ -5,17 +5,17 @@ layout: page
 
 ## tl;dr
 
-I was implementing an LLM from scratch using only research papers and was frustrated by the slow performance of my Python tokenizer, so I built one in C. `bytephase` is a high-performance [byte-pair tokenizer](https://github.com/benarnav/bytephase){:target="_blank" rel="noopener"} that uses a hybrid architecture with a Python API and C extensions for core operations. 
+I was implementing an LLM from scratch using only research papers and was frustrated by the slow performance of my pure Python tokenizer, so I built one in C. `bytephase` is a high-performance [byte-pair tokenizer](https://github.com/benarnav/bytephase){:target="_blank" rel="noopener"} that uses a hybrid architecture with a Python API and C extensions for core operations. 
 
-It uses a trie-based encoding approach to achieve tokenization speeds of 2.41M tokens/sec, significantly outperforming many existing solutions.  Training the tokenizer is over 3,000 times faster compared to a reference Python implementation by [Andrej Karpathy](https://github.com/karpathy/minbpe){:target="_blank" rel="noopener"}. This project demonstrates my ability to optimize critical ML pipeline components and implement novel solutions based on academic papers. The development process provided deep insights into low-level LLM operations, demonstrating expertise in both theoretical and practical aspects of AI system optimization.
+It uses a trie-based encoding approach to achieve tokenization speeds of 2.41M tokens/sec, significantly outperforming many existing solutions. Training the tokenizer is over 3,000 times faster compared to a reference Python implementation by [Andrej Karpathy](https://github.com/karpathy/minbpe){:target="_blank" rel="noopener"}. It's the code is [available here](https://github.com/benarnav/bytephase), and you're welcome to use `bytephase` for your own LLM or NLP needs.
 
 ## Background
 
-Byte-pair encoding (BPE) is a crucial component in modern natural language processing, particularly for training large language models. It was popularized by [Sennrich et al.](https://arxiv.org/pdf/1508.07909){:target="_blank" rel="noopener"} and further adapted to merge at the byte level in the [GPT-2 paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf){:target="_blank" rel="noopener"}: *Language Models are Unsupervised Multitask Learners*. This algorithm is used to train some of the most popular LLMs, making it a fundamental building block in AI language understanding.
+Byte-pair encoding (BPE) is a crucial component in modern natural language processing, particularly for training large language models. It was popularized by [Sennrich et al.](https://arxiv.org/pdf/1508.07909){:target="_blank" rel="noopener"} and further adapted to merge at the byte level in the [GPT-2 paper](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf){:target="_blank" rel="noopener"}: *Language Models are Unsupervised Multitask Learners*. This algorithm is widely used to train some of the most popular LLMs, making it a fundamental building block in AI language understanding.
 
-As part of a project to implement GPT-2 from scratch using only research papers as reference, I identified the need for a tokenizer that could efficiently handle large datasets quickly without sacrificing flexibility. While my initial Python implementation worked and satisfied the requirements in the paper, it was painfully slow. I had learned how the algorithm worked, but if I ever wanted to train my LLM, I was staring down a major bottleneck before I even started building any of the model architecture.
+As part of a project to implement GPT-2 from scratch using only research papers as reference, my first step was to build the tokenizer. I built a pure Python version and it was painfully slow. I understood the algorithm, but if I ever wanted to attempt training my LLM implementation, I needed a more efficient implementation. And this wasn't a problem that would be solved by throwing compute at it.    
 
-Enter: The C Programming Language. It was the first language I learned and I've always been fond of it, despite the critics, and it would be simple to integrate into the rest of my Python codebase.
+I settled on optimizing the tokenizer so it could efficiently handle large datasets quickly without sacrificing flexibility. Enter: The C Programming Language. It was the first language I learned and I've always been fond of it, despite the critics, and it would be simple to integrate into the rest of my Python codebase. By the time I was done I truly appreciated all you get for free in Python, and all that has to be implemented in C to provide that functionality. 
 
 ## The Algorithm
 
@@ -24,17 +24,15 @@ Enter: The C Programming Language. It was the first language I learned and I've 
   <figcaption>Tokens learned using the BPE algorithm</figcaption>
 </figure>
 
-The byte-pair encoding algorithm proposed by Sennrich et al. iteratively merges the most frequent pair of characters or character sequences, effectively learning a vocabulary of subword units. This approach allows the model to handle rare words and morphologically rich languages more effectively. The GPT-2 paper adapted this technique to operate directly on bytes rather than Unicode characters, introducing a clever twist: by processing raw bytes, the tokenizer can handle any string of text without the need for pre-processing, effectively creating a universal tokenizer. This byte-level BPE maintains the benefits of subword tokenization while eliminating issues with different encodings or languages, making it particularly well-suited for training large, multilingual language models.
+The byte-pair encoding algorithm proposed by Sennrich et al. iteratively merges the most frequent pair of characters or character sequences, learning a vocabulary of subword units. This approach allows the model to handle rare words and morphologically rich languages more effectively. The GPT-2 paper adapted this technique to operate directly on bytes rather than Unicode or ASCII characters. This was a clever strategy: by processing raw bytes, the tokenizer can handle any string of text, in any writing system, without the need for pre-processing, effectively creating a universal tokenizer. This byte-level BPE maintains the benefits of subword tokenization while eliminating issues with different character encodings or languages, making it particularly well-suited for training large, multilingual language models.
 
-The BPE algorithm begins by splitting words into individual bytes and counting their frequencies. It then iteratively merges the most frequent adjacent pair of tokens, creating a new token from this pair, and adds it to the vocabulary. This process continues until a desired vocabulary size is reached or no more merges are possible, resulting in a final vocabulary of subword units that efficiently represents the training corpus.
+The BPE algorithm begins by splitting words into individual bytes and counting their frequencies. It then iteratively merges the most frequent adjacent pair of tokens, creating a new token from this pair, and adds it to the vocabulary. After a token is created, new pair frequencies are calculated and the most frequent pair is merged. This process continues until a desired vocabulary size is reached or no more merges are possible, resulting in a final vocabulary of full words or subword units that efficiently represents the training corpus.
 
-## C Implementation
+## bytephase: a C Implementation
 
-The core of `bytephase` is built around training the tokenizer to a target vocabulary and then encoding text into token IDs for use in LLM training and inference, both of which are implemented as C extensions of Python. A trie data structure for efficient storage and rapid lookup of tokens, which is crucial for high-speed encoding. The trie is constructed during the training phase or when a training file is loaded, while decoding operations are handled by a lookup table.
+The core of `bytephase` is built around training the tokenizer to a target vocabulary and then encoding text into token IDs for use in LLM training and inference, both of which are implemented as C extensions of Python. Aside from the speed gains from using C, I also worked to optimize elements of the algorithm to avoid what I saw as unnecessary and expensive work.
 
-This trie structure allows for `O(n)` time complexity for both insertion and search operations, where n is the length of the token. This is a significant improvement over naive string matching approaches, especially for large vocabularies.
-
-Many BPE implementations recalculate byte-pair statistics for the entire training corpus after each merge step. This is highly inefficient and I instead update statistics on the fly as adjacent bytes are merged into a single token. Once we find a pair to be merged, there are a maximum of four operations required:   
+Many existing BPE implementations recalculate byte-pair statistics for the entire training corpus after each merge step. This is highly inefficient and I instead update statistics on the fly as adjacent bytes are merged into a single token. Once we find a pair to be merged, there are a maximum of four operations required:   
 
 Update left context (if exists):
 1. Decrement the frequency of the bigram formed by the left token and the first token of the pair.
@@ -68,13 +66,22 @@ if (*unigram_1 == (*max_node)->bigram[0] && *unigram_2 == (*max_node)->bigram[1]
 
 Finally we replace the first token of the matched pair with the new merged token ID and shift the rest of the byte sequence one place to account for [two tokens becoming one](https://www.youtube.com/watch?v=FA5jsa1lR9c){:target="_blank" rel="noopener"}. At the end of training, tokens are returned as byte sequences which are reconstituted from the tokens using a depth-first search algorithm.
 
+The other major optimization implemented in C is a pair of methods for encoding text into a token sequence. A trie data structure for efficient storage and rapid lookup of tokens, which is crucial for high-speed encoding. The trie is constructed during the training phase or when a training file is loaded, while decoding operations are handled by a dictionary.
+
+This trie structure allows for `O(n)` time complexity for both insertion and search operations, where n is the length of the token. This is a significant improvement over naive string matching approaches, especially for large vocabularies.
 
 ## Python Integration
 
-To maintain ease of use while leveraging C's performance benefits, I designed a Python API that interfaces with the C extensions. This hybrid approach allows users to interact with the tokenizer using familiar Python syntax while the computationally intensive tasks are handled by C extensions.
+While building this for myself was extremely rewarding, I ultimately wanted it to be useful and not just an intellectual exercise. To maintain ease of use while leveraging C's performance benefits, I designed a Python API that interfaces with the C extensions. This hybrid approach allows users to interact with the tokenizer using familiar Python syntax while the computationally intensive tasks are handled by C extensions.
 
-The Python `Tokenizer` class acts as a wrapper around the C functions, handling the initialization, training, encoding, and decoding processes. This high-level interface abstracts away the low-level details, providing a seamless user experience. I also leveraged the highly optimized `regex` library (also written in C!) since I found my attempts to implement Perl-style regular expressions in C were slower.
+The Python `Tokenizer` class acts as a wrapper around the C functions, handling the initialization, training, encoding, and decoding processes. This high-level interface abstracts away the low-level details, providing a seamless user experience. I also leveraged the highly optimized `regex` library (also [written in C](https://github.com/mrabarnett/mrab-regex){:target="_blank" rel="noopener"}!) since I found my attempts to implement Perl-style regular expressions in C were slower.
 
+Training the tokenizer can be done in as little as two lines of Python:
+```python
+tok = Tokenizer()
+tok.train("path/to/your/data.txt", vocab_size=128000)
+```
+The `train` method handles reading the file in chunks (2MB by default), the regex parsing and the calls to C extensions. 
 ```python
 def train(self, file_path: str, vocab_size: int) -> None:
     text_stats = Counter()
@@ -97,12 +104,15 @@ def train(self, file_path: str, vocab_size: int) -> None:
 
     self._trie = build_trie(self.decode_dict)
 ```
-Despite having 3,000 times more merges, `bytephase` trains faster than a reference pure Python implementation by the AI educator Andrej Karpathy. It also uses less than half the memory since Karpathy's implementation requires reading all text into memory. It's not a perfect comparison, but does demonstrate the efficiency gains achieved through the C extensions.
+
+Comparing `bytephase` to other implementations shows significant gains. Despite having 3,000 times more merges, `bytephase` trains faster than a reference pure Python implementation by the AI educator Andrej Karpathy. It also uses less than half the memory since Karpathy's implementation requires reading all text into memory. It's not a perfect comparison, but does demonstrate the efficiency gains achieved through the C extensions.
 
 | Tokenizer                | Merges | Training Time (s) | Memory Usage (MB) |
 |--------------------------|--------|------------------:|------------------:|
 | minbpe (Karpathy)   |     10 |            212.31 |            755.58 |
 | bytephase (Arnav)        |  30,000 |            193.86 |            361.48 |
+
+These numbers were achieved by testing on the [first 10,000 elements](https://huggingface.co/datasets/NeelNanda/pile-10k){:target="_blank" rel="noopener"} of [The Pile](https://pile.eleuther.ai){:target="_blank" rel="noopener"} dataset. I'm working on adding more benchmarks and will update this post when those are ready.
 
 ## Performance Optimization
 One of the key challenges in developing `bytephase` was balancing memory usage and speed. To address this, I implemented two distinct encoding modes in the encode method:
@@ -128,10 +138,10 @@ These optimizations resulted in impressive performance metrics:
 | Train     |      1.42M |            735 |
 | Inference |      2.41M |          19,220 |
 
-These numbers were achieved by testing on the [first 10,000 elements](https://huggingface.co/datasets/NeelNanda/pile-10k){:target="_blank" rel="noopener"} of [The Pile](https://pile.eleuther.ai){:target="_blank" rel="noopener"} dataset, a benchmark commonly used in LLM development.
+These tests also used the [first 10,000 elements](https://huggingface.co/datasets/NeelNanda/pile-10k){:target="_blank" rel="noopener"} of The Pile.
 
 ## Lessons Learned and Future Improvements section:
-Developing `bytephase` provided deep insights into the intricacies of tokenization and its impact on LLM performance. Some key takeaways include:
+Developing `bytephase` was a fascinating and rewarding deep dive into the intricacies of tokenization and its impact on LLM performance. Some key takeaways include:
 
 - The importance of efficient data structures in NLP pipelines
 - The trade-offs between memory usage and processing speed
@@ -144,7 +154,7 @@ Future improvements could include:
 - Adding support for custom tokenization rules to enhance flexibility
 
 ## Conclusion
-`bytephase` represents not just a high-performance tokenizer, but a deep dive into the fundamentals of LLM preprocessing. By implementing this critical component from scratch, I've gained invaluable insights into the low-level operations that power modern AI systems and important experience balancing theoretical understanding with practical implementation.
+By implementing this critical component from scratch, I've gained invaluable insights into the low-level operations that power modern AI systems and important experience balancing theoretical understanding with practical implementation. While BPE is currently the most popular method of tokenization, this will likely not last forever. 
 
 As AI systems continue to grow in size and complexity, the ability to optimize and fine-tune every component of the pipeline becomes increasingly crucial. Projects like this showcase the kind of deep, system-level understanding that's essential for pushing the boundaries of what's possible in AI.
 
