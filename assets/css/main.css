@@ -1,10 +1,5 @@
-@font-face {
-  font-family:  'Zodiak-Regular';
-  src: url('/assets/fonts/Zodiak-Regular.woff')  format('woff');
-}
-
 body {
-    font-family:'Zodiak-Regular', serif;
+    font-family: serif;
     color: #dfdfdf;
     background: #101010;
 }
