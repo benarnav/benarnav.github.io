@@ -117,6 +117,7 @@ Comparing `bytephase` to other implementations shows significant gains. Despite 
 These numbers were achieved by testing on the [first 10,000 elements](https://huggingface.co/datasets/NeelNanda/pile-10k){:target="_blank" rel="noopener"} of [The Pile](https://pile.eleuther.ai){:target="_blank" rel="noopener"} dataset. I'm working on adding more benchmarks and will update this post when those are ready.
 
 ## Performance Optimization
+
 One of the key challenges in developing `bytephase` was balancing memory usage and speed. To address this, I implemented two distinct encoding modes in the encode method:
 
 1. Training mode: Optimized for lower memory usage, ideal for processing large datasets and conserving memory during training.
