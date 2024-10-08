@@ -196,14 +196,15 @@ img {
   align-self: center;
   width: 140%;
 }
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+}
 .iframe-div {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -70vw;
-  margin-right: -70vw;
-  max-width: 140vw;
-  width: 140vw;
+  width: 140%;
+  max-width: 1120px; /* Adjust if needed */
 }
 .iframe-div iframe {
   width: 100%;

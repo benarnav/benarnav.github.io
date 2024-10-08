@@ -28,11 +28,11 @@ Listen to a podcast version of the research paper, created with Google's Noteboo
 I cycle a lot in New York and no matter how omnipresent the sight of a car parked in the bike lane has become, it's still annoying and it's still dangerous. Occasionally I would file complaints on the NYC311 app, but it would rarely result in a ticket. And even if the app said police had issued a summons, I had done previous work showing that there's a [significant discrepancy](/posts/nyc_311.md) between NYPD claims and city records. Often, locations that are habitually plagued by illegal parking see no change year after year no matter how many complaints are filed.
 
 This study is an attempt to assess how the police respond to civilian complaints about illegal parking. I combed through over 900 traffic cameras and selected 21 based on their clear view of areas where parking was unambiguously prohibited, like fire hydrants, bike lanes and no standing zones. I then built a program to monitor these locations for illegal parking and file complaints (officially known as service requests) to 311, which forwards them to the police, and track its status. When the NYPD closes a service request they are required to pick a resolution from a list of predetermined responses. I compared this response to the ground truth captured by the camera and recorded it in a database.
-
+<div class="ifame-container">
 <div class="iframe-div">
 <iframe src="/assets/iframes/parking_monitor_map.html"></iframe>
   <p>Camera locations and number of complaints (bar height)</p>
-</div>
+</div</div>
 
 You may be asking: why does this matter? At first glance, illegal parking might seem like a small issue in the grand scheme of urban problems, but the reality is that it’s closely tied to bigger challenges like traffic safety, congestion, and urban mobility. When cars block bike lanes, for instance, it forces cyclists to merge into traffic, putting them at greater risk. Similarly, when fire hydrants or emergency lanes are blocked, it can slow down response times for first responders. This isn’t just about inconvenience, it’s about safety, the equitable use of public space and a system that effectively incentives driving. If there's no consequence for rampant illegal parking, then it signals it's accepted by the police.
 
