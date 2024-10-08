@@ -1,5 +1,5 @@
 ---
-title: Do image classifiers deepdream of electric sheep?
+title: Do Image Classifiers Deepdream of Electric Sheep?
 layout: page
 ---
 ## tl;dr
