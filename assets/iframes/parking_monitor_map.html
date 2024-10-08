@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>pydeck</title>
+        <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <script src='https://cdn.jsdelivr.net/npm/@deck.gl/jupyter-widget@~9.0.*/dist/index.js'></script>
+    <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#deck-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#deck-container canvas {
+  z-index: 1;
+  background: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="deck-container">
+    </div>
+  </body>
+  <script>
+    const container = document.getElementById('deck-container');
+    const jsonInput = {
+  "initialViewState": {
+    "latitude": 40.7128,
+    "longitude": -74.0059,
+    "pitch": 45,
+    "tooltip": {
+      "text": "No. service requests {sr_count}"
+    },
+    "zoom": 10.7
+  },
+  "layers": [
+    {
+      "@@type": "ColumnLayer",
+      "data": [
+        {
+          "camera_name": "2AVE_86St",
+          "latitude": 40.77785,
+          "longitude": -73.95155,
+          "sr_count": 10
+        },
+        {
+          "camera_name": "2Ave_72St",
+          "latitude": 40.76898,
+          "longitude": -73.95801,
+          "sr_count": 23
+        },
+        {
+          "camera_name": "2Ave_74St",
+          "latitude": 40.77008,
+          "longitude": -73.95735,
+          "sr_count": 68
+        },
+        {
+          "camera_name": "3Ave_65St",
+          "latitude": 40.63928,
+          "longitude": -74.02359,
+          "sr_count": 37
+        },
+        {
+          "camera_name": "3Ave_UnionSt",
+          "latitude": 40.67821,
+          "longitude": -73.98585,
+          "sr_count": 7
+        },
+        {
+          "camera_name": "4Ave_UnionSt",
+          "latitude": 40.67748,
+          "longitude": -73.98287,
+          "sr_count": 57
+        },
+        {
+          "camera_name": "62St_QBBUpperLevelexitramp",
+          "latitude": 40.762,
+          "longitude": -73.96135,
+          "sr_count": 77
+        },
+        {
+          "camera_name": "7Ave_9St",
+          "latitude": 40.6667,
+          "longitude": -73.98208,
+          "sr_count": 17
+        },
+        {
+          "camera_name": "AdamPowell_110St",
+          "latitude": 40.7998,
+          "longitude": -73.95559,
+          "sr_count": 8
+        },
+        {
+          "camera_name": "AdamsSt_WilloughbySt",
+          "latitude": 40.69287,
+          "longitude": -73.9884,
+          "sr_count": 28
+        },
+        {
+          "camera_name": "Amsterdam_86St",
+          "latitude": 40.78767,
+          "longitude": -73.97567,
+          "sr_count": 10
+        },
+        {
+          "camera_name": "Crescentst_41Ave",
+          "latitude": 40.75169,
+          "longitude": -73.93945,
+          "sr_count": 2
+        },
+        {
+          "camera_name": "FordhamRdand_GrandConcourse",
+          "latitude": 40.86169,
+          "longitude": -73.89793,
+          "sr_count": 11
+        },
+        {
+          "camera_name": "GrandConcourse_BedfordParkBlvd",
+          "latitude": 40.87258,
+          "longitude": -73.88788,
+          "sr_count": 58
+        },
+        {
+          "camera_name": "GrandSt(BorinquenPl)_UnionAve",
+          "latitude": 40.71063,
+          "longitude": -73.95135,
+          "sr_count": 11
+        },
+        {
+          "camera_name": "QnsBlvd_65Ave",
+          "latitude": 40.72929,
+          "longitude": -73.85936,
+          "sr_count": 16
+        },
+        {
+          "camera_name": "QnsBlvd_QnCntMall",
+          "latitude": 40.73366,
+          "longitude": -73.87016,
+          "sr_count": 14
+        },
+        {
+          "camera_name": "RichmondAve_ForestAve",
+          "latitude": 40.62479,
+          "longitude": -74.14848,
+          "sr_count": 3
+        },
+        {
+          "camera_name": "WBB-6SouthRdwy_DelancyStandClintonSt",
+          "latitude": 40.71703,
+          "longitude": -73.98602,
+          "sr_count": 52
+        },
+        {
+          "camera_name": "WestHouston_HudsonSt",
+          "latitude": 40.72849,
+          "longitude": -74.00763,
+          "sr_count": 48
+        },
+        {
+          "camera_name": "WytheAve_North12St",
+          "latitude": 40.72215,
+          "longitude": -73.95677,
+          "sr_count": 1
+        }
+      ],
+      "elevationRange": [
+        0,
+        100
+      ],
+      "elevationScale": 100,
+      "extruded": true,
+      "getElevation": "@@=sr_count",
+      "getFillColor": [
+        250,
+        140,
+        0
+      ],
+      "getLineColor": [
+        250,
+        140,
+        0
+      ],
+      "getPosition": "@@=[longitude, latitude]",
+      "id": "1f386418-9daa-4f6d-b833-678ef2c19cab",
+      "pickable": true,
+      "radius": 50
+    }
+  ],
+  "mapProvider": "carto",
+  "mapStyle": "https://basemaps.cartocdn.com/gl/dark-matter-nolabels-gl-style/style.json",
+  "views": [
+    {
+      "@@type": "MapView",
+      "controller": true
+    }
+  ]
+};
+    const tooltip = true;
+    const customLibraries = null;
+    const configuration = null;
+
+    const deckInstance = createDeck({
+                  container,
+      jsonInput,
+      tooltip,
+      customLibraries,
+      configuration
+    });
+
+  </script>
+</html>

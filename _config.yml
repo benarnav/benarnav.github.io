@@ -19,6 +19,10 @@ repo:
 permalink: '/'
 post_dirs: false
 
+include:
+  - "assets/audio/parking_monitor_podcast.mp3"
+  - "assets/iframes/parking_monitor_map.html"
+
 # Build settings
 markdown: kramdown
 kramdown:
