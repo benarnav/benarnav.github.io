@@ -31,7 +31,7 @@ This study is an attempt to assess how the police respond to civilian complaints
 
 <div class="ifame-container">
 <div class="iframe-div">
-<iframe src="/assets/iframes/parking_monitor_map_zoom.html"></iframe>
+<iframe src="/assets/iframes/parking_monitor_map.html"></iframe>
   <p>Camera locations and number of complaints (bar height)</p>
 </div>
 </div>
