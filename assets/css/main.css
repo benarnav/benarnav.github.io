@@ -198,8 +198,10 @@ img {
 }
 .iframe-container {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  align-items: center;
+  width: 140%;
+  align-self: center;
+  flex-direction: column;
   overflow-x: hidden;
 }
 .iframe-div {
