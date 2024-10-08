@@ -197,20 +197,22 @@ img {
   width: 140%;
 }
 .iframe-container {
-  display: flex;
-  align-items: center;
-  width: 140%;
-  align-self: center;
-  flex-direction: column;
-  overflow-x: hidden;
-}
-.iframe-div {
-  width: 140%;
-  max-width: 1120px; /* Adjust if needed */
-}
-.iframe-div iframe {
+  position: relative; 
   width: 100%;
-  height: 600px; /* Adjust to match your iframe's original height */
+  overflow-x: visible; 
+}
+
+.iframe-div {
+  position: relative;
+  width: 140%;
+  max-width: none; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+.iframe-div iframe {
+  width: 100%; 
+  height: 600px; 
   border: none;
 }
 .iframe-div p {
