@@ -30,7 +30,10 @@ I cycle a lot in New York and no matter how omnipresent the sight of a car parke
 This study is an attempt to assess how the police respond to civilian complaints about illegal parking. I combed through over 900 traffic cameras and selected 21 based on their clear view of areas where parking was unambiguously prohibited, like fire hydrants, bike lanes and no standing zones. I then built a program to monitor these locations for illegal parking and file complaints (officially known as service requests) to 311, which forwards them to the police, and track its status. When the NYPD closes a service request they are required to pick a resolution from a list of predetermined responses. I compared this response to the ground truth captured by the camera and recorded it in a database.
 
 <div class="iframe-div">
+<figure>
 <iframe src="/assets/iframes/parking_monitor_map.html" width="800px" height="600px" frameborder="0"></iframe>
+  <figcaption>Camera locations and number of complaints (bar height)</figcaption>
+</figure>
 </div>
 
 You may be asking: why does this matter? At first glance, illegal parking might seem like a small issue in the grand scheme of urban problems, but the reality is that it’s closely tied to bigger challenges like traffic safety, congestion, and urban mobility. When cars block bike lanes, for instance, it forces cyclists to merge into traffic, putting them at greater risk. Similarly, when fire hydrants or emergency lanes are blocked, it can slow down response times for first responders. This isn’t just about inconvenience, it’s about safety, the equitable use of public space and a system that effectively incentives driving. If there's no consequence for rampant illegal parking, then it signals it's accepted by the police.
@@ -41,7 +44,7 @@ I have previously used Department of Transportation [cameas](https://webcams.nyc
 
 <figure class="oversize-figure">
     <img src="/assets/img/parking_monitor_algorithm_graphic.jpg" alt="visual flow chart describing the algorithm" />
-  <figcaption>Workflow of Illegal Parking Detection and Service Request Filing to 311</figcaption>
+  <figcaption>Workflow of illegal parking detection and service request filing to 311</figcaption>
 </figure>
 
 This study employs a mixed-methods approach, combining quantitative analysis of camera footage with qualitative assessment of police responses. The 21 cameras were selected to capture a range of urban environments, but we were ultimately limited by the location of DOT cameras and the subset that included areas of unambiguous no parking zones. The areas that were monitored included 11 bicycle lanes, 5 bicycle lanes with an adjacent vehicle turning lane, 4 areas where all parking is prohibited and 1 fire hydrant. I used a YOLOv8 model trained on COCO images for object detection and the service requests were filed to 311 through the official website using selenium. To distinguish between momentary stops and actual illegal parking, vehicles were only considered illegally parked if they remained stationary for more than 3 minutes, chosen based on New York City's [idling law](https://portal.311.nyc.gov/article/?kanumber=KA-02222){:target="_blank" rel="noopener"}.
@@ -95,7 +98,7 @@ One particularly egregious example came from a camera on Manhattan's Upper East 
 
 <figure class="oversize-figure">
     <img src="/assets/img/parking_monitor_2ave_74st.png" alt="scofflaws" />
-  <figcaption>Images Captured from DOT Camera on 2nd Avenue and E 74th Street, Manhattan.</figcaption>
+  <figcaption>Images captured from DOT camera on 2nd Avenue and E 74th Street, Manhattan.</figcaption>
 </figure>
 
 On three separate days, brown box trucks were illegally parked for between 58 minutes and an hour and 56 minutes at this location, generating three, nine and 11 separate service requests respectively. In all of these cases the police closed the complaint, saying "action was not necessary." On two more occasions, tractor trailers were parked illegally for more than three hours each time, each resulting in seven complaints to the NYPD. The police closed the service requests alternatively claiming that "action was not necessary," that the trucks "were gone" and that officers "took action to fix the condition." All of these statements are contradicted by visual evidence.
