@@ -11,6 +11,8 @@ layout: page
 
 ## Projects
 
+[ How AI Reveals the Truth About Police Response to Illegal Parking](/posts/parking_monitor/)
+
 [Quantifying New York's Surge in Illegal Mopeds Using Computer Vision](/posts/moped_detector/)
 
 [How the NYPD Responds to Civilian Complaints on Street Safety](/posts/nyc_311/)
