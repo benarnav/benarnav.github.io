@@ -10,7 +10,7 @@ I repurposed traffic cameras operated by New York City's Department of Transport
 I found in over half the cases (52.15%) vehicles were still illegally parked when police closed the complaint, and in only a fraction of cases (2.87%) did police issue a ticket to the offending vehicle. These findings suggest there are serious issues with the current system and support the case for increased automated ticketing, greater police oversight and street designs that inherently discourage illegal parking.
 
 <figure class="oversize-figure">
-    <img src="benarnav.github.io/assets/img/parking_monitor_examples.jpg" alt="example images from the object detection model" />
+    <img src="/assets/img/parking_monitor_examples.jpg" alt="example images from the object detection model" />
   <figcaption>Scofflaws illegally parked in various locations across NYC</figcaption>
 </figure>
 
@@ -19,7 +19,7 @@ I found in over half the cases (52.15%) vehicles were still illegally parked whe
 Listen to a podcast version of the research paper, created with Google's NotebookLM:
 
 <audio controls>
-  <source src="benarnav.github.io/assets/audio/parking_monitor_podcast.mp3" type="audio/mpeg">
+  <source src="/assets/audio/parking_monitor_podcast.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
@@ -29,7 +29,9 @@ I cycle a lot in New York and no matter how omnipresent the sight of a car parke
 
 This study is an attempt to assess how the police respond to civilian complaints about illegal parking. I combed through over 900 traffic cameras and selected 21 based on their clear view of areas where parking was unambiguously prohibited, like fire hydrants, bike lanes and no standing zones. I then built a program to monitor these locations for illegal parking and file complaints (officially known as service requests) to 311, which forwards them to the police, and track its status. When the NYPD closes a service request they are required to pick a resolution from a list of predetermined responses. I compared this response to the ground truth captured by the camera and recorded it in a database.
 
-<iframe src="/assets/iframes/parking_monitor_map.html" width="800px" height="600px" frameborder="1"></iframe>
+<div class="iframe-div">
+<iframe src="/assets/iframes/parking_monitor_map.html" width="800px" height="600px" frameborder="0"></iframe>
+</div>
 
 You may be asking: why does this matter? At first glance, illegal parking might seem like a small issue in the grand scheme of urban problems, but the reality is that it’s closely tied to bigger challenges like traffic safety, congestion, and urban mobility. When cars block bike lanes, for instance, it forces cyclists to merge into traffic, putting them at greater risk. Similarly, when fire hydrants or emergency lanes are blocked, it can slow down response times for first responders. This isn’t just about inconvenience, it’s about safety, the equitable use of public space and a system that effectively incentives driving. If there's no consequence for rampant illegal parking, then it signals it's accepted by the police.
 
