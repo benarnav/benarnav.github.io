@@ -197,7 +197,10 @@ img {
   width: 140%;
 }
 .iframe-div {
+  display: flex;
+  align-items: center;
   align-self: center;
+  flex-direction: column;
   width: 140%; 
 }
 @media only screen and (max-width: 768px) {
