@@ -32,7 +32,7 @@ This study is an attempt to assess how the police respond to civilian complaints
 <div class="iframe-div">
 <iframe src="/assets/iframes/parking_monitor_map.html"></iframe>
   <p>Camera locations and number of complaints (bar height)</p>
-</div</div>
+</div></div>
 
 You may be asking: why does this matter? At first glance, illegal parking might seem like a small issue in the grand scheme of urban problems, but the reality is that it’s closely tied to bigger challenges like traffic safety, congestion, and urban mobility. When cars block bike lanes, for instance, it forces cyclists to merge into traffic, putting them at greater risk. Similarly, when fire hydrants or emergency lanes are blocked, it can slow down response times for first responders. This isn’t just about inconvenience, it’s about safety, the equitable use of public space and a system that effectively incentives driving. If there's no consequence for rampant illegal parking, then it signals it's accepted by the police.
 
