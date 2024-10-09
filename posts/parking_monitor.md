@@ -5,7 +5,7 @@ layout: page
 
 ## tl;dr
 
-I repurposed traffic cameras operated by New York City's Department of Transportation to monitor for illegal parking using computer vision, and then filed complaints to the police through an [official city website](https://portal.311.nyc.gov/article/?kanumber=KA-01986) for non-emergency issues. To assess the police response, I compared their reported actions with the actual situation on the ground.
+I repurposed traffic cameras operated by New York City's Department of Transportation (DOT) to monitor for illegal parking using computer vision, and then filed complaints to the police through an [official city website](https://portal.311.nyc.gov/article/?kanumber=KA-01986) for non-emergency issues. To assess the police response, I compared their reported actions with the actual situation on the ground.
 
 In over half the cases (52.15%), the vehicles were still illegally parked when the police marked the complaint as resolved, and in just 2.87% of cases did they issue a ticket. These numbers highlight serious flaws in the system and make a strong case for more automated ticketing, stricter police oversight, and street designs that naturally deter illegal parking.
 
@@ -35,10 +35,9 @@ This study is an attempt to assess how the police respond to civilian complaints
   <p>Camera locations and number of complaints (bar height)</p>
 </div>
 </div>
+Youmay be asking: why does this matter? At first glance, illegal parking might seem like a small issue in the grand scheme of urban problems, but the reality is that it’s closely tied to bigger challenges like traffic safety, congestion, and urban mobility. When cars block bike lanes, for instance, it forces cyclists to merge into traffic, putting them at greater risk. Similarly, when fire hydrants or emergency lanes are blocked, it can slow down response times for first responders. This isn’t just about inconvenience, it’s about safety, the equitable use of public space and a system that effectively incentivizes driving. If there's no consequence for rampant illegal parking, then it signals it's accepted by the police.
 
-You may be asking: why does this matter? At first glance, illegal parking might seem like a small issue in the grand scheme of urban problems, but the reality is that it’s closely tied to bigger challenges like traffic safety, congestion, and urban mobility. When cars block bike lanes, for instance, it forces cyclists to merge into traffic, putting them at greater risk. Similarly, when fire hydrants or emergency lanes are blocked, it can slow down response times for first responders. This isn’t just about inconvenience, it’s about safety, the equitable use of public space and a system that effectively incentivizes driving. If there's no consequence for rampant illegal parking, then it signals it's accepted by the police.
-
-I have previously used Department of Transportation [cameas](https://webcams.nyctmc.org/map){:target="_blank" rel="noopener"} and computer vision to [quantify](/posts/moped_detector.md) illegal driving by gas-powered mopeds, a problem that felt pervasive but had no numbers to back up that feeling. The motivation for this project was very similar: a suspicion the police were ignoring citizen complaints and a search to provide some figures to what is actually happening.
+I have previously used DOT [cameras](https://webcams.nyctmc.org/map){:target="_blank" rel="noopener"} and computer vision to [quantify](/posts/moped_detector.md) illegal driving by gas-powered mopeds, a problem that felt pervasive but had no numbers to back up that feeling. The motivation for this project was very similar: a suspicion the police were ignoring citizen complaints and a search to provide some figures to what is actually happening.
 
 ## Data and Methods
 
