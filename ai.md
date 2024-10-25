@@ -1,5 +1,5 @@
 ---
-title: AI / Mechanistic Interpretability
+title: AI / Machine Learning / Mechanistic Interpretability
 layout: page
 ---
 
