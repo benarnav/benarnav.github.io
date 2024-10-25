@@ -2,6 +2,7 @@
 title: How AI Reveals the Truth About Police Response to Illegal Parking
 layout: page
 ---
+*This post is based on a [research paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4974275){:target="_blank" rel="noopener"} currently under review at a journal.*
 
 ## tl;dr
 
