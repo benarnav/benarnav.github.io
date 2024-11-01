@@ -12,6 +12,12 @@ A space for side projects, tinkering and musings on AI, technology and beyond.
 
 [The Lawless State of New York’s Streets](https://www.vitalcitynyc.org/articles/the-lawless-state-of-new-yorks-streets){:target="_blank" rel="noopener"}
 
+## Press
+
+[Researchers Use AI to Empirically Prove the NYPD Does Not Give a Shit About Illegal Parking](https://hellgatenyc.com/ai-nypd-illegal-parking/){:target="_blank" rel="noopener"}
+
+[Study Exposes NYPD’s 'Systemic Failure' To Enforce Safety-Related Parking Violations](https://nyc.streetsblog.org/2024/10/29/study-exposes-nypds-systemic-failure-to-enforce-safety-related-parking-violations){:target="_blank" rel="noopener"}
+
 ## Tinkering
 
-[How to (almost) never miss the subway again](/posts/arrivals_rgb_display/)
+[How to never miss the subway again](/posts/arrivals_rgb_display/)
