@@ -1,8 +1,8 @@
 ---
-title: blog
+title: More
 layout: page
 blog_index: true
-permalink: blog/
+permalink: more/
 ---
 A space for side projects, tinkering and musings on AI, technology and beyond.
 
