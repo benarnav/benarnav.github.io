@@ -13,7 +13,7 @@ layout: page
 
 ## Projects
 
-[ How AI Reveals the Truth About Police Response to Illegal Parking](/posts/parking_monitor/)
+[How AI Reveals the Truth About Police Response to Illegal Parking](/posts/parking_monitor/)
 
 [Quantifying New York's Surge in Illegal Mopeds Using Computer Vision](/posts/moped_detector/)
 
