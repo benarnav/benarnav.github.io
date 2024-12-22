@@ -1,91 +1,9 @@
 ---
 title: The Anticlock
-layout: page
+layout: anticlock
 ---
 
-<html>
-<head>
-    <title>The Anticlock</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <style>
-        
-.clock-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    gap: 20px;
-    padding: 20px;
-    background-color: transparent;
-    color: white;
-}
 
-.clock {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-}
-
-.clock circle[stroke] {
-    stroke: white;
-    fill: transparent;
-}
-
-.clock line[stroke] {
-    stroke: white;
-}
-
-.number {
-    font-family: serif;
-    font-size: calc(min(3vw, 20px));
-    font-weight: bold;
-    fill: white;
-}
-.number[data-script="hebrew"] {
-    font-family: 'Bona Nova', sans-serif;
-    font-weight: 700;
-}
-
-.number[data-script="eastern-arabic"] {
-    font-family: 'Amiri', serif;
-    font-weight: 700;
-
-}
-
-#script-select {
-    padding: 8px;
-    font-size: max(16px, 2vw);
-    border-radius: 4px;
-    min-width: max-content;
-    width: auto;
-    /* Make select match system colors */
-    background-color: transparent;
-    color: white;
-    border-color: white;
-}
-
-#script-select:focus {
-    outline-color: white;
-}
-
-.second-hand {
-    stroke: #71f859;
-}
-.hand {
-    stroke: white;
-    fill:none;
-}
-.center-dot{
-    stroke:#000000;
-}
-    </style>
-</head>
-<body>
     <div class="clock-container">
         <svg class="clock" viewBox="0 0 200 200">
             <circle cx="100" cy="100" r="95" fill="transparent" stroke="white" stroke-width="2"/>
@@ -187,5 +105,3 @@ layout: page
         setInterval(updateClockHands, 1000);
         updateClockHands();
     </script>
-</body>
-</html>
