@@ -1,7 +1,7 @@
 .clock-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     min-height: 100vh;
     gap: 20px;
@@ -72,3 +72,7 @@
 .clock .center-dot {
     stroke: #000000;
 }
+.clock-container #script-select option {
+    background-color: #101010;  
+    color: white;
+  }
