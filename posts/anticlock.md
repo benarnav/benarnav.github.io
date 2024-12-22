@@ -88,12 +88,35 @@ layout: anticlock
         const minuteAngle = -minutes * 6;
         const secondAngle = -seconds * 6;
         
-        document.getElementById('hour-marker').setAttribute('transform', 
-            `rotate(${hourAngle}, 100, 100)`);
-        document.getElementById('minute-marker').setAttribute('transform', 
-            `rotate(${minuteAngle}, 100, 100)`);
-        document.getElementById('second-marker').setAttribute('transform', 
-            `rotate(${secondAngle}, 100, 100)`);
+        // document.getElementById('hour-marker').setAttribute('transform', 
+        //     `rotate(${hourAngle}, 100, 100)`);
+        // document.getElementById('minute-marker').setAttribute('transform', 
+        //     `rotate(${minuteAngle}, 100, 100)`);
+        // document.getElementById('second-marker').setAttribute('transform', 
+        //     `rotate(${secondAngle}, 100, 100)`);
+            const hourHand = document.getElementById('hour-marker');
+        const minuteHand = document.getElementById('minute-marker');
+        const secondHand = document.getElementById('second-marker');
+
+        console.log('Before update:', {
+            hourHand: hourHand.getAttribute('style'),
+            minuteHand: minuteHand.getAttribute('style'),
+            secondHand: secondHand.getAttribute('style')
+        });
+        
+        hourHand.setAttribute('transform', `rotate(${hourAngle}, 100, 100)`);
+        hourHand.setAttribute('stroke', 'white'); // Add this
+        
+        minuteHand.setAttribute('transform', `rotate(${minuteAngle}, 100, 100)`);
+        minuteHand.setAttribute('stroke', 'white'); // Add this
+        
+        secondHand.setAttribute('transform', `rotate(${secondAngle}, 100, 100)`);
+        secondHand.setAttribute('stroke', '#71f859'); // Add this
+
+        console.log('After update:', {
+            hourHand: hourHand.getAttribute('style'),
+            minuteHand: minuteHand.getAttribute('style'),
+            secondHand: secondHand.getAttribute('style')});
     }
 
     // Initialize the clock
