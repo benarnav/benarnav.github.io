@@ -5,7 +5,6 @@
     align-items: center;
     min-height: 100vh;
     gap: 20px;
-    padding: 20px;
     background-color: transparent;
     color: white;
 }
@@ -41,6 +40,9 @@
 .clock .number[data-script="eastern-arabic"] {
     font-family: 'Amiri', serif;
     font-weight: 700;
+}
+.clock .number[data-script="samaritan"] {
+    font-size: 10px;
 }
 
 .clock-container #script-select {
