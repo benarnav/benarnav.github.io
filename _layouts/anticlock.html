@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ page.title }}</title>
+    {% include seo.md %}
+    {% include css.md %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/clock.css' | relative_url }}">
-    {% include seo.md %}
-
+    
 </head>
 <body>
     <div class="pagecontents">
