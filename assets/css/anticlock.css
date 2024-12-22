@@ -36,7 +36,7 @@
 }
 
 .clock .number[data-script="hebrew"] {
-    font-family: 'Bona Nova', sans-serif;
+    font-family: 'Bona Nova', serif;
     font-weight: 700;
 }
 

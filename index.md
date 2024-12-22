@@ -23,3 +23,5 @@ This built on [earlier work I did](https://www.vitalcitynyc.org/articles/the-law
 ## I like to tinker
 
 I was tired of checking my phone for subway departures, so I built an [LED arrival board](posts/arrivals_rgb_display.md) for my living room.
+
+I spent a night at NYC's Museum of Modern Art watching a film that made me [think a lot about time](/posts/anticlock/).
