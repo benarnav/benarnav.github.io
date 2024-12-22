@@ -118,7 +118,7 @@ sub {
   code.highlighter-rouge {
     color: #00dca6;
   }
-  svg, object.svg, img.svg {
+  svg:not(.clock), object.svg, img.svg {
     filter: invert(100%);
   }
   table tr {
@@ -149,7 +149,7 @@ sub {
   code.highlighter-rouge {
     color: #00dca6;
   }
-  svg, object.svg, img.svg {
+  svg:not(.clock), object.svg, img.svg {
     filter: invert(100%);
   }
   table tr {
