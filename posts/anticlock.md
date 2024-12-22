@@ -103,6 +103,10 @@ layout: anticlock
     updateClockHands();
 </script>
 
-## subhead
+I recently spent several hours watching Christian Marclay's [*The Clock*](https://www.moma.org/calendar/exhibitions/5746?) a hypnotic collage of watches, bedside alarms, public clocks that demand attention, inventive cuckoo clocks—and everything in between. There were ticking hands, glowing digits, and clock faces without numbers at all.
 
-Body text will go here
+Inspired by Marclay’s meditation on time, I began to wonder: how much of our perception of it is shaped by convention rather than necessity? This led me to create the Anticlock—a timepiece that reimagines how we interpret and engage with temporal markers, drawing on writing systems read from right to left: Arabic, Hebrew, Syriac, and Samaritan. By reversing the motion of the hands, the Anticlock subtly disrupts our habitual way of reading the clock face. Even in Arabic-speaking countries on clocks where Eastern Arabic numerals are used, the hands traditionally move clockwise, reinforcing a universal pattern.
+
+This disruption is particularly potent given that readers of left-to-right languages tend to [mentally represent](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0011667) events as unfolding from left to right in space. The familiar circular face maintains a connection to traditional timepieces, even as the reversed motion challenges our ingrained temporal associations.
+
+While Marclay's The Clock shows us how time permeates our visual culture through film, the Anticlock demonstrates how the very symbols we use to represent time can shape our perception of it. In reversing time's arrow, the Anticlock encourages us to question the narratives we impose on something as universal as time.
