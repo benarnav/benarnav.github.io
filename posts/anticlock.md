@@ -30,8 +30,8 @@ layout: page
 <body>
     <div class="clock-container">
         <select id="script-select" onchange="updateClockNumbers()">
-            <option value="arabic">Arabic</option>
-            <option value="persian">Persian</option>
+            <option value="arabic">Western/Arabic</option>
+            <option value="eastern arabic">Eastern Arabic</option>
             <option value="hebrew">Hebrew</option>
             <option value="syriac">Syriac</option>
             <option value="samaritan">Samaritan</option>
