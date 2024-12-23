@@ -60,7 +60,6 @@ layout: anticlock
 
         for (let i = 0; i < 12; i++) {
             const angle = -i * 30 - 90;
-            // const radius = selectedScript === 'samaritan' ? 75 : 85;
             const radius = 85
             const x = 100 + radius * Math.cos(angle * Math.PI / 180);
             const y = 100 + radius * Math.sin(angle * Math.PI / 180);
