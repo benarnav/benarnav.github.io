@@ -109,4 +109,4 @@ Inspired by Marclay’s meditation on time, I began to wonder: how much of our p
 
 This disruption is particularly potent given that readers of left-to-right languages tend to [mentally represent](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0011667){:target="_blank" rel="noopener"} events as unfolding from left to right in space. The familiar circular face maintains a connection to traditional timepieces, even as the reversed motion challenges our ingrained temporal associations.
 
-While Marclay's The Clock shows us how time permeates our visual culture through film, the Anticlock demonstrates how the very symbols we use to represent time can shape our perception of it. In reversing time's arrow, the Anticlock encourages us to question the narratives we impose on something as universal as time.
+While Marclay's work shows us how time permeates our visual culture through film, the Anticlock demonstrates how the very symbols we use to represent time can shape our perception of it. In reversing time's arrow, the Anticlock encourages us to question the narratives we impose on something as universal as time.
