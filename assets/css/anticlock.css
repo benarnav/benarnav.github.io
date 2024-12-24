@@ -50,7 +50,7 @@
 
 .clock-container #script-select {
     padding: 8px;
-    font-size: max(16px, 2vw);
+    font-size: max(14px, 1vw);
     border-radius: 4px;
     min-width: max-content;
     width: auto;
