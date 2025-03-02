@@ -3,7 +3,9 @@ title: hi, i'm benjamin
 layout: page
 ---
 
-I'm an engineer and researcher focused on building AI that's aligned with human values. I am also a Fellow in the Transportation and Land Use program of the [Marron Institute](https://marroninstitute.nyu.edu){:target="_blank" rel="noopener"} at New York University, where I apply machine learning to study policy outcomes in transportation, government services, policing and use of public space.
+I'm an engineer and researcher focused on building AI that's aligned with human values. I am currently working on AI control research as part of [LASR Labs](https://www.lasrlabs.org/){:target="_blank" rel="noopener"} in London.
+
+I am also a Fellow in the Transportation and Land Use program of the [Marron Institute](https://marroninstitute.nyu.edu){:target="_blank" rel="noopener"} at New York University, where I leverage machine learning to study urban governance issues related to transportation, government responsiveness, policing and use of public space.
 
 I recently attended a programming residency at the [Recurse Center](https://www.recurse.com){:target="_blank" rel="noopener"}, where I worked on projects related to technical AI safety and AI governance. While I was there I built a lot of things, including:
 
