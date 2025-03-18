@@ -3,7 +3,7 @@ title: hi, i'm benjamin
 layout: page
 ---
 
-I'm an engineer and researcher focused on building AI that's aligned with human values. I am currently working on AI control research with [Mary Phuong](https://scholar.google.at/citations?user=3j7mHsIAAAAJ&hl=en){:target="_blank" rel="noopener"} of Google DeepMind as part of [LASR Labs](https://www.lasrlabs.org/){:target="_blank" rel="noopener"} in London.
+I'm a researcher and engineer focused on building AI that's aligned with human values. I am currently working on AI control research with [Mary Phuong](https://scholar.google.at/citations?user=3j7mHsIAAAAJ&hl=en){:target="_blank" rel="noopener"} of Google DeepMind as part of [LASR Labs](https://www.lasrlabs.org/){:target="_blank" rel="noopener"} in London.
 
 I am also a Fellow in the Transportation and Land Use program of the [Marron Institute](https://marroninstitute.nyu.edu){:target="_blank" rel="noopener"} at New York University, where I leverage machine learning to study urban governance issues related to transportation, government responsiveness, policing and use of public space.
 
@@ -14,7 +14,7 @@ I recently attended a programming residency at the [Recurse Center](https://www.
 - A [deepdream algorithm](/posts/dream_mech_interp.md) to visualize parameters of a CNN image classifier and developed methods to "blind" the model to specific objects using principles of mechanistic interpretability
 
 You can [e-mail me](mailto:website@benjaminarnav.com) if you'd like to chat about
-new projects, cycling, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans.
+new projects, urbanism, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans.
 
 ## I like to learn things and tell other people about them
 
