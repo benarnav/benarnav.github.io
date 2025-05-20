@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Transcripts - Benjamin Arnav</title>
+    <!-- Include Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.0.0/marked.min.js"></script>
+    <!-- Include highlight.js for code syntax highlighting in Markdown -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .description {
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+            max-width: 900px;
+            color: #555;
+        }
+
+        .page-title {
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+
+        /* Main layout with 3 columns - fills available space */
+        .main-container {
+            flex: 1 1 auto;
+            display: grid;
+            grid-template-columns: 200px 1fr 1fr;
+            gap: 20px;
+            min-height: 0;
+            /* Important for proper flexbox behavior */
+            overflow: hidden;
+            /* Prevent overflow */
+            width: 100%;
+        }
+
+        @media (max-width: 992px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr 1fr;
+                gap: 10px;
+            }
+        }
+
+        /* Left column with model selection */
+        .model-selector {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #eee;
+            overflow-y: auto;
+        }
+
+        .model-option {
+            display: block;
+            margin-bottom: 12px;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .model-option:hover {
+            background-color: #f0f0f0;
+        }
+
+        .model-option.active {
+            background-color: #e6f7ff;
+            border-left: 3px solid #1890ff;
+        }
+
+        .model-option input {
+            margin-right: 8px;
+        }
+
+        /* Column container to allow flex layout */
+        .column-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+            /* Important for Firefox */
+            overflow: hidden;
+        }
+
+        /* Tabs for action/cot - flex layout */
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+            flex: 0 0 auto;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            margin-right: 5px;
+            background-color: #f5f5f5;
+            white-space: nowrap;
+        }
+
+        .tab:last-child {
+            margin-right: 0;
+        }
+
+        .tab.active {
+            background-color: white;
+            border-color: #ddd;
+            margin-bottom: -1px;
+            border-bottom: 1px solid white;
+        }
+
+        /* Content panels - flex to fill space */
+        .content-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #fff;
+            min-height: 0;
+            /* Important for Firefox */
+            overflow: hidden;
+        }
+
+        .panel-title {
+            margin: 0;
+            color: #555;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+            flex: 0 0 auto;
+        }
+
+        .panel-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+        }
+
+        .code-block {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        #loading {
+            text-align: center;
+            padding: 40px;
+            font-style: italic;
+            color: #777;
+        }
+
+        /* Markdown styles */
+        .markdown {
+            line-height: 1.6;
+        }
+
+        .markdown h1,
+        .markdown h2,
+        .markdown h3,
+        .markdown h4,
+        .markdown h5,
+        .markdown h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .markdown h1 {
+            font-size: 2em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+
+        .markdown h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+
+        .markdown h3 {
+            font-size: 1.25em;
+        }
+
+        .markdown p {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .markdown blockquote {
+            padding: 0 1em;
+            color: #6a737d;
+            border-left: 0.25em solid #dfe2e5;
+            margin: 0 0 16px 0;
+        }
+
+        .markdown ul,
+        .markdown ol {
+            padding-left: 2em;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .markdown code {
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            background-color: rgba(27, 31, 35, 0.05);
+            border-radius: 3px;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        }
+
+        .markdown pre {
+            word-wrap: normal;
+            padding: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: #f6f8fa;
+            border-radius: 3px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .markdown pre code {
+            padding: 0;
+            margin: 0;
+            font-size: 100%;
+            background-color: transparent;
+            border: 0;
+            display: inline;
+            overflow: visible;
+            line-height: inherit;
+            word-wrap: normal;
+        }
+
+        .markdown table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-top: 0;
+            margin-bottom: 16px;
+            display: block;
+            width: 100%;
+            overflow: auto;
+        }
+
+        .markdown table th {
+            font-weight: 600;
+            padding: 6px 13px;
+            border: 1px solid #dfe2e5;
+        }
+
+        .markdown table td {
+            padding: 6px 13px;
+            border: 1px solid #dfe2e5;
+        }
+
+        .markdown table tr {
+            background-color: #fff;
+            border-top: 1px solid #c6cbd1;
+        }
+
+        .markdown table tr:nth-child(2n) {
+            background-color: #f6f8fa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="page-title">Research Transcripts</h1>
+    <p class="description">Brief description of your research transcripts. This can be a few sentences explaining the
+        context of these transcripts and what they demonstrate.</p>
+
+    <div id="loading">Loading transcripts...</div>
+
+    <div id="main-container" class="main-container" style="display: none;">
+        <!-- Left column: Model selector -->
+        <div class="model-selector" id="model-selector">
+            <h3>Select Model & Task</h3>
+            <!-- Radio buttons will be inserted here -->
+        </div>
+
+        <!-- Middle column: Action/CoT tabs -->
+        <div class="column-container">
+            <div class="tabs">
+                <div class="tab active" data-tab="action">Action</div>
+                <div class="tab" data-tab="cot">Chain of Thought</div>
+            </div>
+            <div class="content-panel">
+                <h3 class="panel-title" id="content-title">Action</h3>
+                <div class="panel-content" id="content-display"></div>
+            </div>
+        </div>
+
+        <!-- Right column: Monitors -->
+        <div class="column-container">
+            <div class="tabs">
+                <div class="tab active" data-tab="monitor">Monitor</div>
+            </div>
+            <div class="content-panel">
+                <h3 class="panel-title" id="monitor-title">Action Monitor</h3>
+                <div class="panel-content" id="monitor-display"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configure marked.js for safe rendering
+        marked.setOptions({
+            renderer: new marked.Renderer(),
+            highlight: function (code, lang) {
+                const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+                return hljs.highlight(code, { language }).value;
+            },
+            langPrefix: 'hljs language-',
+            pedantic: false,
+            gfm: true,
+            breaks: false,
+            sanitize: false,
+            smartLists: true,
+            smartypants: false,
+            xhtml: false
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const modelSelector = document.getElementById('model-selector');
+            const contentDisplay = document.getElementById('content-display');
+            const monitorDisplay = document.getElementById('monitor-display');
+            const contentTitle = document.getElementById('content-title');
+            const monitorTitle = document.getElementById('monitor-title');
+            const loading = document.getElementById('loading');
+            const mainContainer = document.getElementById('main-container');
+
+            let transcriptData = [];
+            let currentModel = null;
+            let currentTab = 'action';
+
+            // Function to parse CSV data
+            function parseCSV(text) {
+                // Use Papa Parse if available
+                if (typeof Papa !== 'undefined') {
+                    return Papa.parse(text, { header: true }).data;
+                }
+
+                // Simple CSV parser as fallback
+                const lines = text.split('\n');
+                const headers = lines[0].split(',').map(header =>
+                    header.replace(/^"/, '').replace(/"$/, '').trim()
+                );
+
+                return lines.slice(1).filter(line => line.trim()).map(line => {
+                    const values = parseCSVLine(line);
+                    const obj = {};
+                    headers.forEach((header, i) => {
+                        obj[header] = values[i] || '';
+                    });
+                    return obj;
+                });
+            }
+
+            // Helper function to parse CSV line (handles quoted values with commas)
+            function parseCSVLine(line) {
+                const values = [];
+                let inQuotes = false;
+                let currentValue = '';
+
+                for (let i = 0; i < line.length; i++) {
+                    const char = line[i];
+
+                    if (char === '"') {
+                        if (inQuotes && line[i + 1] === '"') {
+                            // Double quotes inside quotes
+                            currentValue += '"';
+                            i++;
+                        } else {
+                            // Toggle quotes
+                            inQuotes = !inQuotes;
+                        }
+                    } else if (char === ',' && !inQuotes) {
+                        // End of value
+                        values.push(currentValue);
+                        currentValue = '';
+                    } else {
+                        currentValue += char;
+                    }
+                }
+
+                values.push(currentValue); // Add the last value
+                return values;
+            }
+
+            // Function to render markdown
+            function renderMarkdown(text) {
+                return marked.parse(text);
+            }
+
+            // Load CSV data
+            fetch('website_test.csv')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load transcript data');
+                    }
+                    return response.text();
+                })
+                .then(csvText => {
+                    loading.style.display = 'none';
+                    mainContainer.style.display = 'grid';
+
+                    // Parse CSV
+                    transcriptData = parseCSV(csvText);
+
+                    // Create model selector radio buttons
+                    transcriptData.forEach((row, index) => {
+                        const label = `${row.model_U} : ${row.side_task}`;
+                        const id = `model-${index}`;
+
+                        const div = document.createElement('div');
+                        div.className = 'model-option';
+                        div.innerHTML = `
+                            <label for="${id}">
+                                <input type="radio" name="model" id="${id}" value="${index}" ${index === 0 ? 'checked' : ''}>
+                                ${label}
+                            </label>
+                        `;
+
+                        div.querySelector('input').addEventListener('change', function () {
+                            // Update active class
+                            document.querySelectorAll('.model-option').forEach(el => el.classList.remove('active'));
+                            div.classList.add('active');
+
+                            // Update content
+                            updateContent(index, currentTab);
+                        });
+
+                        modelSelector.appendChild(div);
+                    });
+
+                    // Set up tab switching
+                    document.querySelectorAll('.tab').forEach(tab => {
+                        tab.addEventListener('click', function () {
+                            const tabType = this.getAttribute('data-tab');
+
+                            // Skip if clicking the monitor tab or already active
+                            if (tabType === 'monitor' || this.classList.contains('active')) {
+                                return;
+                            }
+
+                            // Update active tab
+                            this.parentNode.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                            this.classList.add('active');
+
+                            // Update content based on tab
+                            currentTab = tabType;
+                            const selectedModel = document.querySelector('input[name="model"]:checked').value;
+                            updateContent(selectedModel, tabType);
+                        });
+                    });
+
+                    // Set first model as active
+                    document.querySelector('.model-option').classList.add('active');
+
+                    // Load initial content
+                    updateContent(0, 'action');
+                })
+                .catch(error => {
+                    console.error('Error loading transcript data:', error);
+                    loading.innerHTML = `Error loading transcript data: ${error.message}<br><br>
+                                        <small>Try using a local web server to test this page.</small>`;
+                });
+
+            // Function to update content based on selection
+            function updateContent(modelIndex, tab) {
+                const row = transcriptData[modelIndex];
+
+                if (!row) {
+                    console.error('Invalid model index:', modelIndex);
+                    return;
+                }
+
+                // Update content panel
+                if (tab === 'action') {
+                    contentTitle.textContent = 'Action';
+
+                    // Assuming row.action already contains the Markdown for a code block
+                    // (e.g., "```python\ncode\n```").
+                    // Pass it directly to renderMarkdown.
+                    contentDisplay.innerHTML = `<div class="markdown">${renderMarkdown(row.action)}</div>`;
+
+                    monitorTitle.textContent = 'Action Monitor';
+                    monitorDisplay.innerHTML = `<div class="markdown">${renderMarkdown(row.action_monitor)}</div>`;
+                } else if (tab === 'cot') {
+                    contentTitle.textContent = 'Chain of Thought';
+                    contentDisplay.innerHTML = `<div class="markdown">${renderMarkdown(row.cot)}</div>`;
+                    monitorTitle.textContent = 'CoT Monitor';
+                    monitorDisplay.innerHTML = `<div class="markdown">${renderMarkdown(row.cot_monitor)}</div>`;
+                }
+            }
+        });
+    </script>
+
+    <!-- Include Papa Parse for better CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</body>
+
+</html>
