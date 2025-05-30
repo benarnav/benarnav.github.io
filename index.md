@@ -3,7 +3,7 @@ title: hi, i'm benjamin
 layout: page
 ---
 
-I'm a researcher and engineer focused on building AI that's aligned with human values. I am currently working on AI control research with [Mary Phuong](https://scholar.google.at/citations?user=3j7mHsIAAAAJ&hl=en){:target="_blank" rel="noopener"} as part of [LASR Labs](https://www.lasrlabs.org/){:target="_blank" rel="noopener"} in London.
+I'm a researcher and engineer focused on building AI that's aligned with human values. I was recently [lead author on a paper](https://arxiv.org/abs/2505.23575){:target="_blank" rel="noopener"} studying chain-of-thought monitoring as part of [LASR Labs](https://www.lasrlabs.org/){:target="_blank" rel="noopener"} in London.
 
 I am also a Fellow in the Transportation and Land Use program of the [Marron Institute](https://marroninstitute.nyu.edu){:target="_blank" rel="noopener"} at New York University, where I leverage machine learning to study urban governance issues related to transportation, government responsiveness, policing and use of public space.
 
