@@ -8,6 +8,10 @@ A space for side projects, tinkering and musings on AI, technology and beyond.
 
 ## Published Work
 
+[CoT Red-Handed: Stress Testing Chain-of-Thought Monitoring](https://arxiv.org/abs/2505.23575){:target="_blank" rel="noopener"}
+
+[Unfaithful Reasoning Can Fool Chain-of-Thought Monitoring](https://www.alignmentforum.org/posts/QYAfjdujzRv8hx6xo/unfaithful-reasoning-can-fool-chain-of-thought-monitoring){:target="_blank" rel="noopener"}
+
 [Why Does the NYPD Ignore So Many Parking Complaints?](https://www.vitalcitynyc.org/articles/illegal-parking-and-failed-governance-ai-study-of-nypd-enforcement?){:target="_blank" rel="noopener"}
 
 [Eye in the Sky: Harnessing AI to Monitor Police Response to Illegal Parking Complaints](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4974275){:target="_blank" rel="noopener"}
