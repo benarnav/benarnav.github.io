@@ -3,7 +3,9 @@ title: Links
 layout: page
 ---
 
-![Under Construction](./assets/img/construction.gif) <mark style="background-color: #f8d904; line-height: 2.2em; vertical-align: middle;">Under Construction</mark> ![Under Construction](./assets/img/construction.gif)
+<img src="./assets/img/construction.gif" alt="Under Construction" style="vertical-align: middle;"> 
+<mark style="background-color: #f8d904; vertical-align: middle;">Under Construction</mark> 
+<img src="./assets/img/construction.gif" alt="Under Construction" style="vertical-align: middle;">
 
 ## Published Work
 
