@@ -3,9 +3,9 @@ title: hi, i'm benjamin
 layout: page
 ---
 
-I'm a researcher and engineer focused on building AI that's aligned with human values. I was the [lead author on a paper](https://arxiv.org/abs/2505.23575){:target="_blank" rel="noopener"} studying chain-of-thought monitoring as part of [LASR Labs](https://www.lasrlabs.org/){:target="_blank" rel="noopener"} in London.
+I'm a researcher and engineer focused on building AI that's aligned with human values. I was the [lead author on a paper](https://arxiv.org/abs/2505.23575){:target="_blank" rel="noopener"} studying chain-of-thought monitoring as part of [LASR Labs](https://www.lasrlabs.org/){:target="_blank" rel="noopener"}.
 
-I am also a Fellow in the Transportation and Land Use program of the [Marron Institute](https://marroninstitute.nyu.edu){:target="_blank" rel="noopener"} at New York University, where I leverage machine learning to study urban governance issues related to transportation, government responsiveness, policing and use of public space.
+I am currently working on research on LLM evaluations as part of the [ML Alignment & Theory Scholars](https://www.matsprogram.org/){:target="_blank" rel="noopener"} (MATS) program in London. I am also a Fellow in the Transportation and Land Use program of the [Marron Institute](https://marroninstitute.nyu.edu){:target="_blank" rel="noopener"} at New York University, where I apply machine learning to study urban governance issues related to transportation, government responsiveness, policing and use of public space.
 
 Read [my latest article](https://www.vitalcitynyc.org/articles/illegal-parking-and-failed-governance-ai-study-of-nypd-enforcement?){:target="_blank" rel="noopener"} where I highlight a chronic issue in New York City and how it's emblematic of the challenges of crafting effective policies when underlying data is tainted. This piece is largely based on [this research paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4974275){:target="_blank" rel="noopener"} where I used machine learning to study how police respond to illegal parking complaints. It paints dire picture where the majority of cases are ignored and offers concrete solutions to make streets safer.
 

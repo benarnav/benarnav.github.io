@@ -1,3 +1,3 @@
 # Website
 
-This is the source for [my personal website/portfolio](https://www.benjaminarnav.com).
+This is the source for [my personal website](https://www.benjaminarnav.com).
