@@ -3,9 +3,9 @@ title: Links
 layout: page
 ---
 
-<img src="./assets/img/construction.gif" alt="Under Construction" style="vertical-align: middle;"> 
+<img src="/assets/img/construction.gif" alt="Under Construction" style="vertical-align: middle;"> 
 <mark style="background-color: #f8d904; vertical-align: middle;">Under Construction</mark> 
-<img src="./assets/img/construction.gif" alt="Under Construction" style="vertical-align: middle;">
+<img src="/assets/img/construction.gif" alt="Under Construction" style="vertical-align: middle;">
 
 ## Published Work
 
