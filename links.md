@@ -3,8 +3,8 @@ title: Links
 layout: page
 ---
 
-<img src="/assets/img/construction.gif" alt="Under Construction" style="vertical-align: middle;"> 
-<mark style="background-color: #f8d904; vertical-align: middle;">Under Construction</mark> 
+<img src="/assets/img/construction.gif" alt="Under Construction" style="vertical-align: middle;">
+<mark style="background-color: #f8d904; vertical-align: middle;">Under Construction</mark>
 <img src="/assets/img/construction.gif" alt="Under Construction" style="vertical-align: middle;">
 
 ## Published Work
@@ -15,7 +15,7 @@ layout: page
 
 [Why Does the NYPD Ignore So Many Parking Complaints?](https://www.vitalcitynyc.org/articles/illegal-parking-and-failed-governance-ai-study-of-nypd-enforcement?){:target="_blank" rel="noopener"}
 
-[Eye in the Sky: Harnessing AI to Monitor Police Response to Illegal Parking Complaints](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4974275){:target="_blank" rel="noopener"}
+[Eye in the Sky: Harnessing AI to Monitor Police Response to Illegal Parking Complaints](https://www.sciencedirect.com/science/article/pii/S026427512500592X){:target="_blank" rel="noopener"}
 
 [The Lawless State of New York's Streets](https://www.vitalcitynyc.org/articles/the-lawless-state-of-new-yorks-streets){:target="_blank" rel="noopener"}
 
