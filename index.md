@@ -11,7 +11,9 @@ AI safety, new projects, urbanism, [music](https://www.youtube.com/watch?v=OKgYJ
 
 ## AI
 
-I was the [lead author on a paper](https://arxiv.org/abs/2505.23575){:target="_blank" rel="noopener"} studying chain-of-thought monitoring as part of [LASR Labs](https://www.lasrlabs.org/){:target="_blank" rel="noopener"}. I'm currently mentoring some projects at SPAR (Supervised Program for Alignment Research), and if you're interested in getting into AI safety research [you should apply](https://sparai.org/){:target="_blank" rel="noopener"}.
+I was the [lead author on a paper](https://arxiv.org/abs/2505.23575){:target="_blank" rel="noopener"} studying chain-of-thought monitoring as part of [LASR Labs](https://www.lasrlabs.org/){:target="_blank" rel="noopener"}. It has inspired some [follow up work](https://www.lesswrong.com/posts/nRcKDYi2KfRTXdvDF/extract-and-evaluate-monitoring-can-significantly-enhance){:target="_blank" rel="noopener"} and has been cited in some [cool papers](https://arxiv.org/pdf/2507.11473){:target="_blank" rel="noopener"}.
+
+I'm currently mentoring some projects at SPAR (Supervised Program for Alignment Research), and if you're interested in getting into AI safety research [you should apply](https://sparai.org/){:target="_blank" rel="noopener"}.
 
 ## Urbanism
 
