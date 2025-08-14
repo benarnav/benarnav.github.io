@@ -4,7 +4,7 @@ layout: page
 ---
 ## tl;dr
 
-I'm a researcher focused on building AI that's aligned with human values. I'm currently contracting as a researcher at OpenAI, where I work on model evaluations. I'm also doing research on detecting sandbagging in LLMs as part of the [ML Alignment & Theory Scholars](https://www.matsprogram.org/){:target="_blank" rel="noopener"} (MATS) program.
+I'm a researcher focused on building AI that's aligned with human values. I'm currently contracting as a researcher at [OpenAI](https://openai.com/safety/){:target="_blank" rel="noopener"}, where I work on model evaluations. I'm also doing research on detecting sandbagging in LLMs as part of the [ML Alignment & Theory Scholars](https://www.matsprogram.org/){:target="_blank" rel="noopener"} (MATS) program.
 
 You can [e-mail me](mailto:website@benjaminarnav.com) if you'd like to chat about
 AI safety, new projects, urbanism, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans.
