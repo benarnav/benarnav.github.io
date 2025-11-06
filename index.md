@@ -4,7 +4,7 @@ layout: page
 ---
 ## tl;dr
 
-I'm currently focused on building AI that's aligned with human values, and to further that goal I'm contracting as a researcher at OpenAI, where I work on model evaluations. I am also a Fellow in the Transportation and Land Use program of the [Marron Institute](https://marroninstitute.nyu.edu){:target="_blank" rel="noopener"} at New York University, where I apply machine learning to study urban governance issues related to transportation, government responsiveness, policing and use of public space.
+I'm currently focused on building AI that's aligned with human values, and to further that goal I'm contracting as a researcher at OpenAI where I work on model evaluations. I am also a Fellow in the Transportation and Land Use program of the [Marron Institute](https://marroninstitute.nyu.edu){:target="_blank" rel="noopener"} at New York University, where I apply machine learning to study urban governance issues related to transportation, government responsiveness, policing and use of public space.
 
 You can [e-mail me](mailto:website@benjaminarnav.com) if you'd like to chat about
 AI safety, new projects, urbanism, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans.
