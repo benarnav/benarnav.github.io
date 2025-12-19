@@ -4,7 +4,7 @@ layout: page
 ---
 ## tl;dr
 
-I'm focused on building AI that's aligned with human values and is beneficial to humanity. To further those goals, I'm currently a contract researcher at OpenAI where I work on model evaluations and monitoring. I'm also a Fellow in the Transportation and Land Use program of the [Marron Institute](https://marroninstitute.nyu.edu){:target="_blank" rel="noopener"} at New York University, where I apply machine learning to study urban governance issues related to transportation, government responsiveness, policing and use of public space.
+I'm focused on building AI that's aligned with human values and is beneficial to humanity. To further those goals, I'm currently a contract researcher at [OpenAI](https://openai.com/index/evaluating-chain-of-thought-monitorability/){:target="_blank" rel="noopener"} where I work on model evaluations and monitoring. I'm also a Fellow in the Transportation and Land Use program of the [Marron Institute](https://marroninstitute.nyu.edu){:target="_blank" rel="noopener"} at New York University, where I apply machine learning to study urban governance issues related to transportation, government responsiveness, policing and use of public space.
 
 You can [e-mail me](mailto:website@benjaminarnav.com) if you'd like to chat about
 AI safety, new projects, urbanism, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk){:target="_blank" rel="noopener"} or ways to make the world a better place for all humans.
@@ -12,6 +12,8 @@ AI safety, new projects, urbanism, [music](https://www.youtube.com/watch?v=OKgYJ
 ## AI
 
 I was the [lead author on a paper](https://arxiv.org/abs/2505.23575){:target="_blank" rel="noopener"} studying chain-of-thought monitoring in AI Control. It has inspired some [follow up work](https://www.lesswrong.com/posts/nRcKDYi2KfRTXdvDF/extract-and-evaluate-monitoring-can-significantly-enhance){:target="_blank" rel="noopener"} and has been cited in some [cool papers](https://arxiv.org/pdf/2507.11473){:target="_blank" rel="noopener"}. I'm currently mentoring some projects at [SPAR](https://sparai.org/){:target="_blank" rel="noopener"} (Supervised Program for Alignment Research), researching dangerous capability evals and methods to improve AI Control.
+
+I also contributed to recent work studying [chain of thought monitorability](https://openai.com/index/evaluating-chain-of-thought-monitorability/){:target="_blank" rel="noopener"} and how it could be an important part of safety cases for highly capable AI systems.
 
 ## Urbanism
 

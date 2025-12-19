@@ -9,8 +9,10 @@ layout: page
 
 ## Published Work
 
+[Monitoring Monitorability](https://cdn.openai.com/pdf/d57827c6-10bc-47fe-91aa-0fde55bd3901/monitoring-monitorability.pdf){:target="_blank" rel="noopener"}
+
 [CoT Red-Handed: Stress Testing Chain-of-Thought Monitoring](https://arxiv.org/abs/2505.23575){:target="_blank" rel="noopener"}
-*39th Conference on Neural Information Processing Systems (NeurIPS 2025)*
+*In Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS 2025)*
 
 [Unfaithful Reasoning Can Fool Chain-of-Thought Monitoring](https://www.alignmentforum.org/posts/QYAfjdujzRv8hx6xo/unfaithful-reasoning-can-fool-chain-of-thought-monitoring){:target="_blank" rel="noopener"}
 
