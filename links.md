@@ -9,6 +9,8 @@ layout: page
 
 ## Published Work
 
+[Why SWE-bench Verified no longer measures frontier coding capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/){:target="_blank" rel="noopener"}
+
 [Monitoring Monitorability](https://cdn.openai.com/pdf/d57827c6-10bc-47fe-91aa-0fde55bd3901/monitoring-monitorability.pdf){:target="_blank" rel="noopener"}
 
 [CoT Red-Handed: Stress Testing Chain-of-Thought Monitoring](https://arxiv.org/abs/2505.23575){:target="_blank" rel="noopener"}
