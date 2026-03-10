@@ -6,7 +6,8 @@
     gap: 20px;
     background-color: transparent;
     color: white;
-    width: 150%;
+    width: 120%;
+    max-width: 900px;
 }
 @media only screen and (max-width: 768px){
     .clock-container{ width: 100%;}

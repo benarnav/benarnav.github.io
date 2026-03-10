@@ -1,6 +1,6 @@
 ---
 title: Quantifying New York's Surge in Illegal Mopeds Using Computer Vision
-layout: page
+layout: mono
 ---
 A version of this research was published in the journal [Vital City](https://www.vitalcitynyc.org/articles/the-lawless-state-of-new-yorks-streets){:target="_blank" rel="noopener"}. I've also posted the [code/data](https://github.com/benarnav/nyc_streets/) if you're interested.
 

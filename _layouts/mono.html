@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include css.md %}
+    <link rel="stylesheet" type="text/css" href="/assets/css/mono.css" />
+    {% include seo.md %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {% if page.load_anticlock_fonts %}
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Syne+Mono&display=swap" rel="stylesheet">
+    {% else %}
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    {% endif %}
+  </head>
+  <body>
+    {% capture page_body %}
+      {% if page.show_nav != false %}
+      <nav class="mono-layout__nav" aria-label="Site">
+        <a href="/">Home</a>
+        <!-- <a href="/links/">Links</a> -->
+      </nav>
+      {% endif %}
+
+      <article class="mono-layout__article">
+        {% if page.show_title != false and page.title %}
+        <h1>{{ page.title }}</h1>
+        {% endif %}
+        {% if page.show_date and page.date %}
+        <p><i>{{ page.date | date: '%B %-d, %Y' }}</i></p>
+        {% endif %}
+        {% if page.co_authors %}
+        <div class="mono-layout__coauthors">
+          {% assign author_list = page.co_authors | split: ", " %}
+          {% assign num_authors = author_list | size %}
+          {% if num_authors > 1 %}
+            With co-authors <i>{{ author_list | join: ", " }}</i>.
+          {% else %}
+            With co-author <i>{{ author_list | join: ", " }}</i>.
+          {% endif %}
+        </div>
+        {% endif %}
+        {{ content }}
+      </article>
+
+      {% if page.show_footer == true %}
+      <div class="mono-layout__footer">
+        {% include footer.md %}
+      </div>
+      {% endif %}
+    {% endcapture %}
+
+    {% if page.infinite_scroll %}
+    <main>
+      <div id="scroll-stream" class="mono-layout__stream" aria-live="off"></div>
+    </main>
+
+    <noscript>
+      <main>
+        <section class="mono-layout__section">
+          {{ page_body }}
+        </section>
+      </main>
+    </noscript>
+
+    <template id="scroll-section-template">
+      <section class="mono-layout__section" data-scroll-copy>
+        {{ page_body }}
+      </section>
+    </template>
+
+    <script>
+      (function () {
+        const INITIAL_COPIES = 5;
+        const BATCH_SIZE = 5;
+        const MAX_COPIES = INITIAL_COPIES + BATCH_SIZE * 3;
+        const stream = document.getElementById("scroll-stream");
+        const template = document.getElementById("scroll-section-template");
+
+        let firstCopyId = -Math.floor(INITIAL_COPIES / 2);
+        let lastCopyId = Math.floor(INITIAL_COPIES / 2);
+        let rafPending = false;
+        let isMutating = false;
+
+        function cloneSection(copyId) {
+          const fragment = template.content.cloneNode(true);
+          const section = fragment.querySelector("[data-scroll-copy]");
+          section.dataset.copyId = String(copyId);
+
+          if (window.applyExternalLinkTargets) {
+            window.applyExternalLinkTargets(fragment);
+          }
+
+          return fragment;
+        }
+
+        function appendInitialCopies() {
+          const fragment = document.createDocumentFragment();
+
+          for (let copyId = firstCopyId; copyId <= lastCopyId; copyId += 1) {
+            fragment.appendChild(cloneSection(copyId));
+          }
+
+          stream.appendChild(fragment);
+        }
+
+        function trimFromStart(count) {
+          const previousHeight = stream.offsetHeight;
+
+          for (let index = 0; index < count; index += 1) {
+            const firstSection = stream.firstElementChild;
+
+            if (!firstSection) {
+              break;
+            }
+
+            firstSection.remove();
+            firstCopyId += 1;
+          }
+
+          window.scrollBy(0, stream.offsetHeight - previousHeight);
+        }
+
+        function trimFromEnd(count) {
+          for (let index = 0; index < count; index += 1) {
+            const lastSection = stream.lastElementChild;
+
+            if (!lastSection) {
+              break;
+            }
+
+            lastSection.remove();
+            lastCopyId -= 1;
+          }
+        }
+
+        function appendBatch() {
+          isMutating = true;
+
+          const fragment = document.createDocumentFragment();
+
+          for (let offset = 1; offset <= BATCH_SIZE; offset += 1) {
+            fragment.appendChild(cloneSection(lastCopyId + offset));
+          }
+
+          lastCopyId += BATCH_SIZE;
+          stream.appendChild(fragment);
+
+          const overflow = stream.children.length - MAX_COPIES;
+          if (overflow > 0) {
+            trimFromStart(overflow);
+          }
+
+          isMutating = false;
+        }
+
+        function prependBatch() {
+          isMutating = true;
+
+          const previousHeight = stream.offsetHeight;
+          const fragment = document.createDocumentFragment();
+
+          for (
+            let copyId = firstCopyId - BATCH_SIZE;
+            copyId < firstCopyId;
+            copyId += 1
+          ) {
+            fragment.appendChild(cloneSection(copyId));
+          }
+
+          firstCopyId -= BATCH_SIZE;
+          stream.prepend(fragment);
+          window.scrollBy(0, stream.offsetHeight - previousHeight);
+
+          const overflow = stream.children.length - MAX_COPIES;
+          if (overflow > 0) {
+            trimFromEnd(overflow);
+          }
+
+          isMutating = false;
+        }
+
+        function centerOnMiddleCopy() {
+          const middleCopy = stream.querySelector('[data-copy-id="0"]');
+
+          if (!middleCopy) {
+            return;
+          }
+
+          window.scrollTo(0, middleCopy.offsetTop);
+        }
+
+        function maybeExtendStream() {
+          if (isMutating || stream.children.length < 2) {
+            return;
+          }
+
+          const sections = Array.from(stream.children);
+          const secondSection = sections[1];
+          const secondToLastSection = sections[sections.length - 2];
+
+          if (secondSection.getBoundingClientRect().top > -window.innerHeight * 0.75) {
+            prependBatch();
+            return;
+          }
+
+          if (
+            secondToLastSection.getBoundingClientRect().top <
+            window.innerHeight * 1.75
+          ) {
+            appendBatch();
+          }
+        }
+
+        function queueExtendCheck() {
+          if (rafPending) {
+            return;
+          }
+
+          rafPending = true;
+          window.requestAnimationFrame(function () {
+            rafPending = false;
+            maybeExtendStream();
+          });
+        }
+
+        if ("scrollRestoration" in history) {
+          history.scrollRestoration = "manual";
+        }
+
+        appendInitialCopies();
+
+        window.requestAnimationFrame(function () {
+          centerOnMiddleCopy();
+          maybeExtendStream();
+        });
+
+        window.addEventListener("scroll", queueExtendCheck, { passive: true });
+        window.addEventListener("resize", queueExtendCheck);
+      })();
+    </script>
+    {% else %}
+    <main class="mono-layout">
+      {{ page_body }}
+    </main>
+    {% endif %}
+    {% include external_links.html %}
+  </body>
+</html>

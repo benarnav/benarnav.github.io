@@ -1,6 +1,6 @@
 ---
 title: Byte by Byte:Optimizing tokenization for large language models
-layout: page
+layout: mono
 ---
 
 ## tl;dr

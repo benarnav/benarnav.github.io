@@ -1,6 +1,6 @@
 ---
 title: "How to never miss the subway again"
-layout: post
+layout: mono
 ---
 I've [posted the code](https://github.com/benarnav/arrivals-board) for the display and invite you to contribute by adding support for your local transit agency!
 

@@ -1,6 +1,6 @@
 ---
 title: Links
-layout: page
+layout: mono
 ---
 
 <img src="/assets/img/construction.gif" alt="Under Construction" style="vertical-align: middle;">

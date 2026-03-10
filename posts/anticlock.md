@@ -1,6 +1,7 @@
 ---
 title: The Anticlock
-layout: anticlock
+layout: mono
+load_anticlock_fonts: true
 ---
 
 <div class="clock-container" markdown="0">
@@ -101,12 +102,12 @@ layout: anticlock
     updateClockHands();
 </script>
 
-I recently spent several hours watching Christian Marclay's [*The Clock*](https://www.moma.org/calendar/exhibitions/5746?){:target="_blank" rel="noopener"}, a hypnotic collage of watches, bedside alarms, public clocks that demand attention, inventive cuckoo clocks—and everything in between. There were ticking hands, glowing digits, and clock faces without numbers at all.
+I sat for hours with Christian Marclay's [*The Clock*](https://www.moma.org/calendar/exhibitions/5746?){:target="_blank" rel="noopener"}. Watches, bedside alarms, station clocks high on the wall. Ticking hands, glowing digits, faces with no numbers at all. You forget where you are. The theater was cool but full, the kind of room where you become aware of your own breathing.
 
-Around 4 a.m., figures hovered between sleep and alertness—someone jolts awake at a ringing phone, another smokes in half-light, and yet another glances at a bedside clock. By 7 a.m., the montage shifts: blinds are raised, kettles whistle, slippers shuffle across floors—everyday routines synchronized with dawn’s arrival.
+At four in the morning, figures drifted between sleep and waking. Someone startled by a phone. Someone smoking in the near-dark, the ember the only sure thing. A hand reaching toward a clock on the nightstand. By seven the light had changed. Blinds drawn up. The sound of a kettle. Slippers on a wooden floor. The whole world resuming at once. You could feel it in the room, too—people shifting in their seats, the day already claiming them.
 
-Inspired by Marclay’s meditation, I began to wonder: how much of our perception of time is shaped by convention rather than necessity? I designed the Anticlock—a timepiece that subtly disorients just enough to awaken our time‑worn habits. Its hands move counter-clockwise, guided by right-to-left scripts like [Arabic](https://www.omniglot.com/writing/arabic.htm), [Hebrew](https://www.omniglot.com/writing/hebrew.htm), [Syriac](https://www.omniglot.com/writing/syriac.htm), and [Samaritan](https://www.omniglot.com/writing/samaritan.htm). Even in Arabic-speaking countries, where clocks commonly use Eastern Arabic numerals, the hands still move clockwise, reinforcing a near-universal pattern. The familiar circular face grounds the device; the reversed motion nudges us to question: what if we unlearn how to read time?
+Afterward I kept thinking about it. Not the film exactly, but the habits it exposed. How much of the way we feel time is convention. Inherited. I made something I call the Anticlock. Its hands move counter-clockwise, after the direction of [Arabic](https://www.omniglot.com/writing/arabic.htm), [Hebrew](https://www.omniglot.com/writing/hebrew.htm), [Syriac](https://www.omniglot.com/writing/syriac.htm), [Samaritan](https://www.omniglot.com/writing/samaritan.htm), some of these ancient. Even in countries where those scripts are read, clocks still turn in the universal way. That seemed worth noticing. The round face is familiar. The motion is not. It's a small disorientation, but it opens something. You watch the hands and for a moment you are outside of everything you know.
 
-This disruption is particularly potent given that readers of left-to-right languages tend to [mentally represent](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0011667){:target="_blank" rel="noopener"} events as unfolding from left to right in space. Marclay’s work makes us conscious of time’s visual and narrative layering. The Anticlock makes us conscious of time’s symbolic infrastructure. Together, I hope to raise the question: are our lives measured, structured—and even narrated—by cinematic conventions and chronometric habits rather than by lived reality?
+There is [research](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0011667){:target="_blank" rel="noopener"} showing that people who read left to right imagine events moving that way in space, a current running beneath thought. Marclay strips the ordinary passage of hours down to its images, its cuts. The Anticlock strips it down to its machinery. Both ask the same question, really. Whether we live inside time or inside the way time has been presented to us.
 
-Time itself doesn't change—but our relationship to it, and how we perceive it, certainly can.
+Time doesn't change. But we might learn to hold it differently.

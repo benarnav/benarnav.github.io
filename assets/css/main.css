@@ -155,13 +155,13 @@ sub {
     background-color: #212121;
   }
 
-  a[href] {
+  /* a[href] {
     color: #00dca6;
   }
 
   a[href]:visited {
     color: #fa8c00;
-  }
+  } */
 
   code.highlighter-rouge {
     color: #00dca6;
@@ -198,13 +198,13 @@ sub {
     background-color: #212121;
   }
 
-  a[href] {
+  /* a[href] {
     color: #00dca6;
   }
 
   a[href]:visited {
     color: #fa8c00;
-  }
+  } */
 
   code.highlighter-rouge {
     color: #00dca6;

@@ -1,6 +1,6 @@
 ---
 title: Do Image Classifiers Deepdream of Electric Sheep?
-layout: page
+layout: mono
 ---
 ## tl;dr
 This investigation serves to inform how deep learning models interpret styles, themes and elements, and how we can begin to interpret and control the outputs by diving into the internal workings. It also raises the question: if we can understand how AI classifies an image, can we alter it—maliciously or not—to be blind to a specific object or style? And why would we want to?
