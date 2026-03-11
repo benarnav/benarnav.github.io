@@ -15,9 +15,9 @@ AI safety, new projects, urbanism, [music](https://www.youtube.com/watch?v=OKgYJ
 
 ### AI
 
-I was the [lead author on a paper](https://arxiv.org/abs/2505.23575){:target="_blank" rel="noopener"} studying chain-of-thought monitoring in AI Control. It has inspired some [follow up work](https://www.lesswrong.com/posts/nRcKDYi2KfRTXdvDF/extract-and-evaluate-monitoring-can-significantly-enhance){:target="_blank" rel="noopener"} and has been cited in some [cool papers](https://arxiv.org/pdf/2507.11473){:target="_blank" rel="noopener"}. I'm currently mentoring some projects at [SPAR](https://sparai.org/){:target="_blank" rel="noopener"} (Supervised Program for Alignment Research), researching dangerous capability evals and methods to improve AI Control.
+I was the [lead author on a paper](https://arxiv.org/abs/2505.23575){:target="_blank" rel="noopener"} studying chain-of-thought monitoring in AI Control. It has inspired some [follow up work](https://www.lesswrong.com/posts/nRcKDYi2KfRTXdvDF/extract-and-evaluate-monitoring-can-significantly-enhance){:target="_blank" rel="noopener"} and has been cited in some [cool papers](https://arxiv.org/pdf/2507.11473){:target="_blank" rel="noopener"}. I continued this work at OpenAI with research on [chain of thought monitorability](https://openai.com/index/evaluating-chain-of-thought-monitorability/){:target="_blank" rel="noopener"} and how it could be an important part of safety cases for highly capable AI systems.
 
-I also contributed to recent work studying [chain of thought monitorability](https://openai.com/index/evaluating-chain-of-thought-monitorability/){:target="_blank" rel="noopener"} and how it could be an important part of safety cases for highly capable AI systems. I've also written about how to accurately track [model capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/){:target="_blank" rel="noopener"} and improve evlauations.
+I've recently written about how to accurately track [model capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/){:target="_blank" rel="noopener"} and improve evlauations. I care a lot about building the field of AI safety, and I mentor researchers when I can. Recent projects included researching dangerous capability evals and methods to improve AI Control.
 
 ### Urbanism
 
