@@ -149,7 +149,7 @@ a:focus-visible {
 
 .mono-layout__section {
   min-height: 100vh;
-  padding: clamp(40px, 8vw, 96px) clamp(24px, 6vw, 72px);
+  padding: clamp(15px, 3vw, 36px) clamp(15px, 3vw, 36px);
   display: flex;
   justify-content: center;
 }
@@ -177,6 +177,6 @@ a:focus-visible {
 
   .mono-layout__section {
     min-height: auto;
-    padding: 28px 20px 40px;
+    padding: 18px 16px 24px;
   }
 }
