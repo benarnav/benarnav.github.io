@@ -11,16 +11,20 @@
       }
     }
 
-    window.applyExternalLinkTargets = function (root) {
-      const linkRoot =
-        root && typeof root.querySelectorAll === "function" ? root : document;
+    function decorateExternalLinks(root) {
+      if (!root || typeof root.querySelectorAll !== "function") {
+        return;
+      }
 
-      linkRoot.querySelectorAll("a[href]").forEach(function (link) {
+      root.querySelectorAll("a[href]").forEach(function (link) {
+        if (link.hasAttribute("target")) {
+          return;
+        }
+
         const href = link.getAttribute("href");
 
         if (
           !href ||
-          link.hasAttribute("target") ||
           href.startsWith("#") ||
           href.startsWith("mailto:") ||
           href.startsWith("tel:") ||
@@ -55,8 +59,12 @@
         relTokens.add("noopener");
         link.setAttribute("rel", Array.from(relTokens).join(" "));
       });
-    };
+    }
 
-    window.applyExternalLinkTargets(document);
+    decorateExternalLinks(document);
+
+    document.querySelectorAll("template").forEach(function (template) {
+      decorateExternalLinks(template.content);
+    });
   })();
 </script>

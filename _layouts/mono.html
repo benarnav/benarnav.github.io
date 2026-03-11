@@ -86,10 +86,6 @@
           const section = fragment.querySelector("[data-scroll-copy]");
           section.dataset.copyId = String(copyId);
 
-          if (window.applyExternalLinkTargets) {
-            window.applyExternalLinkTargets(fragment);
-          }
-
           return fragment;
         }
 
