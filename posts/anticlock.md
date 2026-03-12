@@ -102,7 +102,7 @@ load_anticlock_fonts: true
     updateClockHands();
 </script>
 
-I sat for hours with Christian Marclay's [*The Clock*](https://www.moma.org/calendar/exhibitions/5746?){:target="_blank" rel="noopener"}. Watches, bedside alarms, station clocks high on the wall. Ticking hands, glowing digits, faces with no numbers at all. You forget where you are. The theater was cool but full, the kind of room where you become aware of your own breathing.
+I sat for hours with Christian Marclay's [*The Clock*](https://www.moma.org/calendar/exhibitions/5746?){:target="_blank" rel="noopener"}. Watches, bedside alarms, station clocks high on the wall. Ticking hands, glowing digits, faces devoid of numbers. You forget where you are. The theater was cool but full, the kind of room where you become aware of your own breathing.
 
 At four in the morning, figures drifted between sleep and waking. Someone startled by a phone. Someone smoking in the near-dark, the ember the only sure thing. A hand reaching toward a clock on the nightstand. By seven the light had changed. Blinds drawn up. The sound of a kettle. Slippers on a wooden floor. The whole world resuming at once. You could feel it in the room, too—people shifting in their seats, the day already claiming them.
 
