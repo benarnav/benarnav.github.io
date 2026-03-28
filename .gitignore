@@ -3,3 +3,4 @@ assets/.DS_Store
 .bundle/
 _site/
 vendor/bundle/
+.DS_Store
