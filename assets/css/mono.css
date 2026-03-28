@@ -19,14 +19,14 @@ body {
 }
 
 a {
-  color: #F490CB;
+  color: #ffb8c4;
   text-decoration: underline;
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.22em;
 }
 
 a:visited {
-  color: #F490CB;
+  color: #ffb8c4;
 }
 
 a:hover,
