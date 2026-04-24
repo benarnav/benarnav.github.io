@@ -35,6 +35,8 @@ I was tired of checking my phone for subway departures, so I built an [LED arriv
 
 ### Published Work
 
+[Open Sourcing Monitorability Evaluations](https://alignment.openai.com/monitorability-evals/)
+
 [Why SWE-bench Verified no longer measures frontier coding capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/)
 
 [Monitoring Monitorability](https://arxiv.org/abs/2512.18311)
