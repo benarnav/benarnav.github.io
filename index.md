@@ -15,7 +15,7 @@ AI safety, new projects, urbanism, [music](https://www.youtube.com/watch?v=OKgYJ
 
 ### AI
 
-I was the [lead author on a paper](https://arxiv.org/abs/2505.23575) studying chain-of-thought monitoring in AI Control. It has inspired some [follow up work](https://www.lesswrong.com/posts/nRcKDYi2KfRTXdvDF/extract-and-evaluate-monitoring-can-significantly-enhance) and has been cited in some [cool papers](https://arxiv.org/pdf/2507.11473). I continued this work at OpenAI with research on [chain of thought monitorability](https://openai.com/index/evaluating-chain-of-thought-monitorability/) and how it could be an important part of safety cases for highly capable AI systems.
+I was the [lead author on a paper](https://arxiv.org/abs/2505.23575) studying chain-of-thought monitoring in AI Control. It has inspired some [follow up work](https://www.lesswrong.com/posts/nRcKDYi2KfRTXdvDF/extract-and-evaluate-monitoring-can-significantly-enhance) and has been cited in some [cool papers](https://arxiv.org/pdf/2507.11473). I continued this work at OpenAI with research on [chain of thought monitorability](https://openai.com/index/evaluating-chain-of-thought-monitorability/) and how it could be an important part of safety cases for highly capable AI systems. This paper was accepted to ICML as an oral presentation.
 
 I've recently written about how to accurately track [model capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/) and improve evlauations. I care a lot about building the field of AI safety, and I mentor researchers when I can. Recent projects included building dangerous capability evals to measure sabotage and methods to improve AI control.
 
@@ -42,6 +42,7 @@ I was tired of checking my phone for subway departures, so I built an [LED arriv
 [Why SWE-bench Verified no longer measures frontier coding capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/)
 
 [Monitoring Monitorability](https://arxiv.org/abs/2512.18311)
+*In Proceedings of the 43rd International Conference on Machine Learning (ICML 2026), Oral Presentation*
 
 [CoT Red-Handed: Stress Testing Chain-of-Thought Monitoring](https://arxiv.org/abs/2505.23575)
 *In Proceedings of the 39th Conference on Neural Information Processing Systems (NeurIPS 2025)*
