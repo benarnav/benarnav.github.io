@@ -35,6 +35,8 @@ I was tired of checking my phone for subway departures, so I built an [LED arriv
 
 ### Published Work
 
+[The Best-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi-Agent Systems](https://arxiv.org/abs/2605.29178) *AI4GOOD Workshop @ ICML 2026, Oral Presentation*
+
 [Ensemble Monitoring for AI Control: Diverse Signals Outweigh More Compute](https://arxiv.org/abs/2605.15377)
 
 [Open Sourcing Monitorability Evaluations](https://alignment.openai.com/monitorability-evals/)
