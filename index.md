@@ -15,9 +15,9 @@ AI safety, new projects, urbanism, [music](https://www.youtube.com/watch?v=OKgYJ
 
 ### AI
 
-I was the [lead author on a paper](https://arxiv.org/abs/2505.23575) studying chain-of-thought monitoring in AI Control. It has inspired some [follow up work](https://www.lesswrong.com/posts/nRcKDYi2KfRTXdvDF/extract-and-evaluate-monitoring-can-significantly-enhance) and has been cited in some [cool papers](https://arxiv.org/pdf/2507.11473). I continued this work at OpenAI with research on [chain of thought monitorability](https://openai.com/index/evaluating-chain-of-thought-monitorability/) and how it could be an important part of safety cases for highly capable AI systems. This paper was accepted to ICML as an oral presentation.
+I was the [lead author on a paper](https://arxiv.org/abs/2505.23575) studying chain-of-thought monitoring in AI Control. It has inspired some [follow up work](https://www.lesswrong.com/posts/nRcKDYi2KfRTXdvDF/extract-and-evaluate-monitoring-can-significantly-enhance) and has been cited in some [cool papers](https://arxiv.org/pdf/2507.11473). I continued this work at OpenAI with research on [chain of thought monitorability](https://openai.com/index/evaluating-chain-of-thought-monitorability/) and how it could be an important part of safety cases for highly capable AI systems.
 
-I've recently written about how to accurately track [model capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/) and improve evlauations. I care a lot about building the field of AI safety, and I mentor researchers when I can. Recent projects included building dangerous capability evals to measure sabotage and methods to improve AI control.
+I've recently written about how to accurately track [model capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/) and improve evlauations. I care a lot about building the field of AI safety, and I mentor researchers when I can. Recent projects included building dangerous capability evals to measure [coordinated](https://arxiv.org/abs/2605.29178) sabotage and methods to [ensemble](https://arxiv.org/abs/2605.15377) monitors to improve detection of misaligned actions. Both papers were accepted to workshops at ICML 2026.
 
 ### Urbanism
 
