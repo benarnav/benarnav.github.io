@@ -35,13 +35,15 @@ I was tired of checking my phone for subway departures, so I built an [LED arriv
 
 ### Published Work
 
-[The Best-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi-Agent Systems](https://arxiv.org/abs/2605.29178) *AI4GOOD Workshop @ ICML 2026, Oral Presentation* + *AIWILD Workshop @ ICML 2026, Spotlight*
+[Separating signal from noise in coding evaluations](https://openai.com/index/separating-signal-from-noise-coding-evaluations/) *OpenAI, 2026*
+
+[The Best-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi-Agent Systems](https://arxiv.org/abs/2605.29178) *AI4GOOD Workshop @ ICML 2026, Oral Presentation*. *AIWILD Workshop @ ICML 2026, Spotlight*
 
 [Ensemble Monitoring for AI Control: Diverse Signals Outweigh More Compute](https://arxiv.org/abs/2605.15377)
 
-[Open Sourcing Monitorability Evaluations](https://alignment.openai.com/monitorability-evals/)
+[Open Sourcing Monitorability Evaluations](https://alignment.openai.com/monitorability-evals/) *OpenAI, 2026*
 
-[Why SWE-bench Verified no longer measures frontier coding capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/)
+[Why SWE-bench Verified no longer measures frontier coding capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/) *OpenAI, 2026*
 
 [Monitoring Monitorability](https://arxiv.org/abs/2512.18311)
 *In Proceedings of the 43rd International Conference on Machine Learning (ICML 2026), Oral Presentation*
@@ -51,8 +53,8 @@ I was tired of checking my phone for subway departures, so I built an [LED arriv
 
 [Unfaithful Reasoning Can Fool Chain-of-Thought Monitoring](https://www.alignmentforum.org/posts/QYAfjdujzRv8hx6xo/unfaithful-reasoning-can-fool-chain-of-thought-monitoring)
 
-[Why Does the NYPD Ignore So Many Parking Complaints?](https://www.vitalcitynyc.org/articles/illegal-parking-and-failed-governance-ai-study-of-nypd-enforcement?)
+[Why Does the NYPD Ignore So Many Parking Complaints?](https://www.vitalcitynyc.org/articles/illegal-parking-and-failed-governance-ai-study-of-nypd-enforcement?) *Vital City, 2024*
 
-[Eye in the Sky: Harnessing AI to Monitor Police Response to Illegal Parking Complaints](https://www.sciencedirect.com/science/article/pii/S026427512500592X)
+[Eye in the Sky: Harnessing AI to Monitor Police Response to Illegal Parking Complaints](https://www.sciencedirect.com/science/article/pii/S026427512500592X) *CITIES, 2025*
 
-[The Lawless State of New York's Streets](https://www.vitalcitynyc.org/articles/the-lawless-state-of-new-yorks-streets)
+[The Lawless State of New York's Streets](https://www.vitalcitynyc.org/articles/the-lawless-state-of-new-yorks-streets) *Vital City, 2024*
