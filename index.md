@@ -8,7 +8,9 @@ show_title: false
 ---
 ### hi, i'm benjamin
 
-I'm a researcher focused on building AI that's aligned with human values. To further that goal, I'm currently a contract researcher at [OpenAI](https://openai.com/index/evaluating-chain-of-thought-monitorability/) where I work on model evaluations and monitoring. I'm also a Research Fellow in the Transportation and Land Use program at the Marron Institute at [New York University](https://marroninstitute.nyu.edu), where I apply machine learning to study urban governance issues related to transportation, government responsiveness, policing and use of public space.
+I'm a researcher at Google DeepMind focused on building AI that's aligned with human values. I previously worked with [OpenAI](https://openai.com/index/evaluating-chain-of-thought-monitorability/) on model evaluations and monitorability.
+
+I'm also a Research Fellow in the Transportation and Land Use program at the Marron Institute at [New York University](https://marroninstitute.nyu.edu), where I apply machine learning to study urban governance issues related to transportation, government responsiveness, policing and use of public space.
 
 You can [e-mail me](mailto:website@benjaminarnav.com) if you'd like to chat about
 AI safety, new projects, urbanism, [music](https://www.youtube.com/watch?v=OKgYJnBCjXk) or ways to make the world a better place for all humans.
@@ -17,7 +19,7 @@ AI safety, new projects, urbanism, [music](https://www.youtube.com/watch?v=OKgYJ
 
 I was the [lead author on a paper](https://arxiv.org/abs/2505.23575) studying chain-of-thought monitoring in AI Control. It has inspired some [follow up work](https://www.lesswrong.com/posts/nRcKDYi2KfRTXdvDF/extract-and-evaluate-monitoring-can-significantly-enhance) and has been cited in some [cool papers](https://arxiv.org/pdf/2507.11473). I continued this work at OpenAI with research on [chain of thought monitorability](https://openai.com/index/evaluating-chain-of-thought-monitorability/) and how it could be an important part of safety cases for highly capable AI systems.
 
-I've recently written about how to accurately track [model capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/) and improve evlauations. I care a lot about building the field of AI safety, and I mentor researchers when I can. Recent projects included building dangerous capability evals to measure [coordinated](https://arxiv.org/abs/2605.29178) sabotage and methods to [ensemble](https://arxiv.org/abs/2605.15377) monitors to improve detection of misaligned actions. Both papers were accepted to workshops at ICML 2026.
+I've written about how to accurately track [model capabilities](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/) and improve evlauations. I care a lot about building the field of AI safety, and I mentor researchers when I can. Recent projects included building dangerous capability evals to measure [coordinated](https://arxiv.org/abs/2605.29178) sabotage and methods to [ensemble](https://arxiv.org/abs/2605.15377) monitors to improve detection of misaligned actions. Both papers were accepted to workshops at ICML 2026.
 
 ### Urbanism
 
@@ -34,6 +36,8 @@ I had a great experience attending a programming residency at the [Recurse Cente
 I was tired of checking my phone for subway departures, so I built an [LED arrival board](/posts/arrivals_rgb_display/) for my living room. I spent a night at NYC's Museum of Modern Art watching a film that made me [think a lot about time](/posts/anticlock/).
 
 ### Published Work
+
+[Mapping the boundary of latent planning](https://www.lesswrong.com/posts/jwpGAt955PCMMLRS9/mapping-the-boundary-of-latent-planning)
 
 [Separating signal from noise in coding evaluations](https://openai.com/index/separating-signal-from-noise-coding-evaluations/) *OpenAI, 2026*
 
